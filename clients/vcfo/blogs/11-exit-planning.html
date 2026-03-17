@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Business Exit Planning</title>
+<style>
+body {
+    margin: 0;
+    padding: 2rem 1rem;
+    background: #f1f5f9;
+    font-family: system-ui, sans-serif;
+}
+.page-wrapper {
+    max-width: 1320px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 1.5rem;
+    padding: 3rem 4rem;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+}
+@media (max-width: 768px) {
+    .page-wrapper { padding: 1.5rem 1rem; }
+    body { padding: 1rem 0.5rem; }
+}
+</style>
+</head>
+<body>
+<div class="page-wrapper">
+<!--
+WORDPRESS SETUP:
+- Slug: business-exit-planning
+- Meta Title: Business Exit Planning | Financial Readiness Checklist (2026)
+- Meta Description: 12-24 month exit checklist: EBITDA normalisation, data room, customer concentration, recurring revenue proof. By Colin Wright CPA.
+- Category: Industry News
+- Author: Colin Wright
+- Featured Image: A CFO and business owner reviewing exit planning documents and financial checklists at a boardroom table — clean, professional Australian office with natural light, strategic planning feel
+-->
+
+<style>
+:root {
+    --brand-900: #1e3a8a;
+    --brand-600: #2563eb;
+    --brand-700: #1d4ed8;
+    --slate-950: #0F172A;
+    --slate-900: #0f172a;
+    --slate-600: #475569;
+    --slate-500: #64748b;
+    --slate-400: #94a3b8;
+    --surface-light: #ffffff;
+    --surface-muted: #f8fafc;
+    --border-light: #e2e8f0;
+    --shadow-sm: 0 2px 6px rgba(15, 23, 42, .06);
+    --shadow-md: 0 10px 26px rgba(15, 23, 42, .12);
+    --radius-md: .75rem;
+    --radius-xl: 1.5rem;
+}
+
+.dlf-content {
+    font-family: "Kumbh Sans", system-ui, sans-serif;
+    line-height: 1.6;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.dlf-content h1,
+.dlf-content h2,
+.dlf-content h3,
+.dlf-content h4,
+.dlf-content h5,
+.dlf-content h6 {
+    color: var(--slate-950);
+}
+
+.dlf-dark h1,
+.dlf-dark h2,
+.dlf-dark h3,
+.dlf-dark h4,
+.dlf-dark h5,
+.dlf-dark h6 {
+    color: white;
+}
+
+.dlf-btn {
+  color: #ffffff !important;
+}
+
+.dlf-section { padding: 2rem 0; }
+.dlf-container { padding: 0 1rem; }
+
+.dlf-heading-xl {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: var(--slate-950);
+}
+
+.dlf-heading-lg {
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+    color: var(--slate-950);
+}
+
+.dlf-heading-md {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--slate-950);
+}
+
+.dlf-dark .dlf-heading-xl,
+.dlf-dark .dlf-heading-lg,
+.dlf-dark .dlf-heading-md,
+.dlf-hero-card .dlf-heading-xl,
+.dlf-hero-card .dlf-heading-lg,
+.dlf-hero-card .dlf-heading-md {
+    color: white;
+}
+
+.dlf-badge {
+    display: inline-block;
+    padding: .4rem 1rem;
+    border-radius: 9999px;
+    font-size: .75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--brand-600);
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.dlf-card {
+    background: var(--surface-light);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+    transition: .3s ease;
+    margin-bottom: 2rem;
+}
+
+.dlf-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.dlf-hero-card {
+    background: #0F172A;
+    backdrop-filter: blur(12px);
+    color: white;
+    padding: 3rem;
+    border-radius: var(--radius-xl);
+    margin: 2rem 0;
+}
+
+.dlf-grid {
+    display: grid;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.dlf-grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.dlf-grid-3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+
+.dlf-comparison {
+    background: var(--surface-light);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    border: 1px solid var(--border-light);
+    margin: 2rem 0;
+}
+
+.dlf-compare-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.dlf-compare-cell {
+    padding: 1.5rem;
+}
+
+.dlf-compare-cell:first-child {
+    background: var(--surface-muted);
+    border-right: 1px solid var(--border-light);
+    color: var(--slate-600);
+}
+
+.dlf-compare-cell:last-child {
+    font-weight: 700;
+    color: var(--brand-700);
+}
+
+.dlf-feature-row {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.dlf-icon {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.dlf-icon-positive { background: #dcfce7; color: #166534; }
+.dlf-icon-negative { background: #fef2f2; color: #dc2626; }
+
+.dlf-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem 2rem;
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    text-decoration: none;
+    background: var(--brand-600);
+    color: white;
+    transition: .3s ease;
+    margin: 1rem 0;
+}
+
+.dlf-btn:hover {
+    background: var(--brand-700);
+    transform: translateY(-2px);
+}
+
+.dlf-quote {
+    background: #eff6ff;
+    border-left: 4px solid var(--brand-600);
+    padding: 1.5rem;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    margin: 2rem 0;
+    font-style: italic;
+    color: var(--brand-900);
+}
+
+.dlf-dark {
+    background: var(--slate-950);
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: var(--radius-xl);
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.dlf-muted { color: var(--slate-600); }
+.dlf-center { text-align: center; }
+
+@media (max-width: 768px) {
+    .dlf-comparison {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .dlf-compare-row {
+        grid-template-columns: 1fr 1fr;
+        min-width: 680px;
+    }
+
+    .dlf-compare-cell:first-child {
+        border-right: 1px solid var(--border-light);
+    }
+
+    .dlf-grid-2, .dlf-grid-3 { grid-template-columns: 1fr; }
+}
+
+.dlf-step {
+    display: flex;
+    gap: 1.5rem;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    background: var(--surface-light);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-sm);
+    transition: .3s ease;
+}
+
+.dlf-step:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.dlf-step-number {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 9999px;
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--brand-600);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 800;
+    margin-top: 0.2rem;
+}
+
+.dlf-step-content {
+    flex: 1;
+    min-width: 0;
+}
+</style>
+
+<div class="dlf-content">
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 1. HERO SECTION                            -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-section dlf-center">
+    <span class="dlf-badge">Exit Planning</span>
+    <h2 class="dlf-heading-xl">Business Exit Planning: The Financial Readiness Checklist Your Accountant Won't Give You</h2>
+    <p class="dlf-muted" style="max-width: 720px; margin: 0 auto 1rem;">Only 24% of Australian small and mid-sized business owners have a succession plan in place. Of those who have attempted an exit, 73% say the process did not go to plan. The reason is almost always the same: the financials were not ready for scrutiny.</p>
+    <p class="dlf-muted" style="font-size: 0.85rem;">By <strong>Colin Wright CPA</strong> — Operations Director, Virtual CFO Group &nbsp;|&nbsp; March 2026</p>
+
+    <div class="dlf-hero-card" style="text-align: left;">
+        <span class="dlf-badge" style="background: rgba(37, 99, 235, 0.2); color: #93c5fd;">Executive Summary</span>
+        <h3 class="dlf-heading-lg">A 12-24 Month Financial Readiness Checklist for Business Owners Planning an Exit</h3>
+        <p><strong>Business exit planning</strong> is not a three-month sprint before the broker lists the business. It is a 12 to 24 month project that transforms how your financials are structured, presented, and defended under due diligence. This checklist covers the six areas a CFO prepares that your accountant typically does not: EBITDA normalisation, customer concentration analysis, recurring revenue proof, data room assembly, owner dependency reduction, and forecast modelling. Each area directly influences the <strong>EBITDA multiples</strong> a buyer will pay and whether your deal closes at the asking price or retrads downward. If you are considering a sale, capital raise, or partnership within the next two years, this is the preparation that separates a $3M outcome from a $5M one.</p>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 2. PROBLEM SECTION                         -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-section">
+    <div class="dlf-grid dlf-grid-2">
+        <div>
+            <span class="dlf-badge">The Problem</span>
+            <h2 class="dlf-heading-lg">Why Most Business Sales Underperform</h2>
+            <p>According to <a href="https://news.nab.com.au/news/small-business-succession-challenges/" target="_blank" rel="noopener">NAB research</a>, 69% of Australian businesses currently transitioning or planning to transition do not know what they need to do. That is not a knowledge gap about the market or the buyer pool. It is a preparation gap in their own financial infrastructure.</p>
+            <p>The pattern repeats across every industry. A founder decides to sell. The accountant produces three years of tax returns and a set of financial statements. A broker estimates a price. Then due diligence begins, and the deal starts unravelling: personal expenses mixed into the P&L, no documented customer contracts, revenue concentrated in two clients, and no forward-looking financial model. The buyer either walks or discounts the price by 20% to 40%.</p>
+
+            <div style="margin-top: 1.5rem;">
+                <div class="dlf-feature-row">
+                    <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                    <span><strong>Tax-minimised financials work against you:</strong> the years spent legally minimising taxable income now suppress the earnings figure a buyer multiplies</span>
+                </div>
+                <div class="dlf-feature-row">
+                    <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                    <span><strong>No data room exists:</strong> contracts, leases, employee agreements, and financial models are scattered across email, desktop folders, and the founder's memory</span>
+                </div>
+                <div class="dlf-feature-row">
+                    <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                    <span><strong>Revenue concentration is invisible:</strong> the founder knows their top client is important, but has never quantified that 30% of revenue disappears if one relationship ends</span>
+                </div>
+                <div class="dlf-feature-row">
+                    <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                    <span><strong>No proof of recurring revenue:</strong> invoices go out monthly, but there are no signed contracts, no documented retention rates, and no recurring revenue schedule a buyer can verify</span>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="dlf-card" style="background: var(--slate-950); color: white; border: none;">
+                <h3 class="dlf-heading-md" style="color: white;">The Trillion-Dollar Succession Problem</h3>
+                <p style="font-size: 1.1rem; line-height: 1.7;">48% of Baby Boomer business owners plan to exit within the next one to five years, with 87% departing due to retirement. For more than half of Australian small business owners, their business is their primary retirement asset. Yet <a href="https://dynamicbusiness.com/featured/australias-trillion-dollar-succession-problem-nobodys-talking-about.html" target="_blank" rel="noopener" style="color: #93c5fd;">Dynamic Business reports</a> that 55% of business exits happen through death, disability, bankruptcy, or simply closing the doors. Not planned sales. Not optimised outcomes. Forced closures.</p>
+                <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--slate-400);">Business exit planning is the difference between retiring on your terms and retiring on whatever the market gives you at the last minute.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 3. FRAMEWORK SECTION — The Exit Readiness   -->
+<!--    Checklist                                -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-section">
+    <span class="dlf-badge">The Checklist</span>
+    <h2 class="dlf-heading-lg">The Exit Readiness Checklist: Six Areas Your Accountant Does Not Prepare</h2>
+    <p style="max-width: 700px; margin-bottom: 1rem;">This is <strong>The Exit Readiness Checklist</strong>. It covers the six financial preparation areas that sit outside your accountant's scope but directly determine your sale price. Each area either adds or subtracts from the EBITDA multiple a buyer applies. Addressing all six takes 12 to 24 months. Starting 90 days before sale is too late.</p>
+
+    <div class="dlf-step">
+        <div class="dlf-step-number">1</div>
+        <div class="dlf-step-content">
+            <h3 class="dlf-heading-md">EBITDA Normalisation</h3>
+            <p>Your tax return shows profit after every legitimate deduction your accountant could find. That is exactly what it should do for tax purposes. But a buyer does not care about your taxable income. They care about <strong>normalised EBITDA</strong>: earnings before interest, tax, depreciation, and amortisation, with owner-specific and non-recurring items added back.</p>
+            <p>Common add-backs include the owner's above-market salary (adjusted to a market-rate replacement), personal vehicle leases, one-off legal or renovation costs, and family member wages for non-operational roles. For a full breakdown of how normalisation works, our guide to <a href="https://www.virtualcfogroup.com.au/business-valuation-australia/">business valuation in Australia</a> covers the process in detail.</p>
+            <p><strong>Start 18 months out.</strong> Clean the P&L progressively so that by the time you go to market, two full financial years reflect the normalised earnings story.</p>
+        </div>
+    </div>
+
+    <div class="dlf-step">
+        <div class="dlf-step-number">2</div>
+        <div class="dlf-step-content">
+            <h3 class="dlf-heading-md">Customer Concentration Analysis</h3>
+            <p><strong>Customer concentration</strong> is the single fastest way to compress a valuation multiple. According to the <a href="https://corporatefinanceinstitute.com/resources/valuation/customer-concentration/" target="_blank" rel="noopener">Corporate Finance Institute</a>, a single client contributing more than 10% of total revenue is a red flag for acquirers. If your top five clients contribute more than 25% combined, buyers apply a concentration discount.</p>
+            <p>The fix takes time. You cannot diversify a revenue base in three months. Effective business exit planning starts with mapping your revenue by client as a percentage of total, then building a 12-month plan to bring your largest client below 15%. This might mean acquiring new clients, expanding smaller accounts, or restructuring pricing to rebalance the mix.</p>
+            <p><strong>Start 24 months out.</strong> Revenue diversification is the slowest lever to move and the one buyers scrutinise hardest.</p>
+        </div>
+    </div>
+
+    <div class="dlf-step">
+        <div class="dlf-step-number">3</div>
+        <div class="dlf-step-content">
+            <h3 class="dlf-heading-md">Recurring Revenue Proof</h3>
+            <p>Buyers pay more for predictable revenue. A professional services business billing $200K per month with signed 12-month retainer agreements is worth materially more than the same business billing $200K per month on ad-hoc project invoices. The revenue is identical. The risk profile is not.</p>
+            <p>Document every recurring engagement: signed contracts with term and renewal clauses, historical retention rates by client cohort, and monthly recurring revenue (MRR) trending over 24 months. If your business operates on handshake agreements, convert them to formal contracts now. Not because you distrust your clients, but because a buyer needs verifiable proof that the revenue continues post-sale.</p>
+            <p><strong>Start 18 months out.</strong> You need at least 12 months of documented recurring revenue data to present a credible trend.</p>
+        </div>
+    </div>
+
+    <div class="dlf-step">
+        <div class="dlf-step-number">4</div>
+        <div class="dlf-step-content">
+            <h3 class="dlf-heading-md">Data Room Assembly</h3>
+            <p>A <strong>data room</strong> is the organised collection of every document a buyer or their advisors need to complete due diligence. Buyers today expect access on day one of serious discussions. Assembling it under pressure after a letter of intent is signed leads to missed documents, delays, and deals that collapse.</p>
+            <p>What belongs in the data room: three years of financial statements (reviewed or audited), the EBITDA normalisation schedule, a rolling financial forecast, all material contracts (customer, supplier, lease), employee agreements and organisational chart, IP documentation, insurance policies, and <a href="https://www.ato.gov.au/" target="_blank" rel="noopener">ATO</a> compliance history including BAS lodgement records.</p>
+            <p><strong>Start 12 months out.</strong> Build the data room as a living repository that updates monthly, not a one-time document dump.</p>
+        </div>
+    </div>
+
+    <div class="dlf-step">
+        <div class="dlf-step-number">5</div>
+        <div class="dlf-step-content">
+            <h3 class="dlf-heading-md">Owner Dependency Reduction</h3>
+            <p>If the business cannot operate for 90 days without the founder, buyers see a job disguised as a business. Owner dependency compresses EBITDA multiples by 0.5x to 1.5x on mid-market deals because the buyer is pricing in the risk that revenue, relationships, and operational knowledge walk out the door with the seller.</p>
+            <p>Reducing dependency means documenting processes, delegating client relationships to a second-tier manager, and building a management layer that can run daily operations independently. The test is simple: could you take a 90-day holiday and the business would not lose revenue, clients, or staff?</p>
+            <p><strong>Start 24 months out.</strong> Hiring a general manager, transitioning key client relationships, and documenting institutional knowledge cannot be compressed into a quarter.</p>
+        </div>
+    </div>
+
+    <div class="dlf-step">
+        <div class="dlf-step-number">6</div>
+        <div class="dlf-step-content">
+            <h3 class="dlf-heading-md">Forecast Modelling</h3>
+            <p>Your accountant reports on the past. A buyer buys the future. That disconnect is where value leaks. A credible three-year financial forecast, stress-tested across multiple scenarios, tells a buyer what the business is capable of under their ownership.</p>
+            <p>The forecast should include: revenue projections by service line or product, gross margin trends, operating cost assumptions, working capital requirements, and capital expenditure plans. Build three scenarios (base, upside, downside) and be prepared to defend the assumptions behind each one.</p>
+            <p><strong>Start 12 months out.</strong> A forecast model built on 12 months of actual tracked performance is credible. One built from scratch the week before due diligence begins is not.</p>
+        </div>
+    </div>
+
+    <div class="dlf-quote">
+        <strong>Your accountant's job is to minimise your tax. A CFO's job before a sale is to maximise your valuation.</strong> These two objectives work against each other unless someone is managing the transition from tax-optimised to buyer-ready financials 12 to 24 months before the sale.
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 4. EVIDENCE — Comparison + Worked Example  -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-section">
+    <span class="dlf-badge">The Impact</span>
+    <h2 class="dlf-heading-lg">What Business Sale Readiness Looks Like in Dollars</h2>
+    <p>Abstract checklists are useful. Concrete numbers are convincing. Here is what happens when each checklist item is addressed for a $7M revenue services business with 30 staff, approaching a sale in 18 months.</p>
+
+    <div class="dlf-comparison">
+        <div class="dlf-compare-row" style="background: var(--slate-950); color: white;">
+            <div class="dlf-compare-cell" style="background: var(--slate-950); color: white; font-weight: 700; border-right: 1px solid var(--slate-600);">Unprepared (Typical Exit)</div>
+            <div class="dlf-compare-cell" style="color: white;">CFO-Prepared (12 Months of Exit Planning)</div>
+        </div>
+        <div class="dlf-compare-row">
+            <div class="dlf-compare-cell">Reported profit: $520K. No normalisation done</div>
+            <div class="dlf-compare-cell">Normalised EBITDA: $890K after add-backs (owner salary, one-off costs, personal expenses)</div>
+        </div>
+        <div class="dlf-compare-row">
+            <div class="dlf-compare-cell">Largest client: 28% of revenue. Buyer flags concentration risk</div>
+            <div class="dlf-compare-cell">Largest client reduced to 14% through 12 months of targeted business development</div>
+        </div>
+        <div class="dlf-compare-row">
+            <div class="dlf-compare-cell">Revenue billed on ad-hoc invoices. No contracts. No retention data</div>
+            <div class="dlf-compare-cell">65% of revenue under signed 12-month agreements. MRR tracked for 14 months</div>
+        </div>
+        <div class="dlf-compare-row">
+            <div class="dlf-compare-cell">No data room. Documents assembled in a rush over 3 weeks</div>
+            <div class="dlf-compare-cell">Data room live for 6 months. Updated monthly. 180+ documents organised by category</div>
+        </div>
+        <div class="dlf-compare-row">
+            <div class="dlf-compare-cell">Founder manages all key client relationships. No GM in place</div>
+            <div class="dlf-compare-cell">GM hired 14 months ago. Founder has stepped back from daily operations for 6 months</div>
+        </div>
+        <div class="dlf-compare-row">
+            <div class="dlf-compare-cell">No financial forecast. Buyer builds their own (conservative)</div>
+            <div class="dlf-compare-cell">Three-scenario forecast model. 12 months of actual vs forecast tracking. Variance under 8%</div>
+        </div>
+    </div>
+
+    <p>The unprepared business sells at 3.0x on $520K reported profit: <strong>enterprise value of $1.56M</strong>. The prepared business sells at 4.5x on $890K normalised EBITDA: <strong>enterprise value of $4.0M</strong>. That is a <strong>$2.44M difference</strong> to the seller. Not from growing the business. From preparing it properly. This is the reality of business valuation in Australia: the number is shaped more by preparation than by performance.</p>
+
+    <p>For context, buyers in this market are increasingly rigorous. <a href="https://williambuck.com/tools/dealmaking-insights-report-2026/" target="_blank" rel="noopener">William Buck's 2026 Dealmaking Insights Report</a> notes that due diligence periods have extended, with buyers applying sharper focus on quality of earnings, working capital cycles, customer diversity, and management depth. The businesses that achieve premium EBITDA multiples are the ones that have addressed these concerns before the buyer asks about them.</p>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 5. MID-ARTICLE CTA                         -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-section">
+    <p>If you are reading this and mentally scoring your business against these six areas, you already know where the gaps sit. The earlier you start, the more value you capture. <a href="https://www.virtualcfogroup.com.au/schedule-assessment/">A free 30-minute assessment</a> is where we map your current exit readiness and identify the two or three moves that would shift your achievable multiple the most.</p>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 6. QUALIFIER / REFLECTION SECTION          -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-section">
+    <h2 class="dlf-heading-lg">Is Your Business Exit-Ready? A Quick Self-Test</h2>
+
+    <div class="dlf-grid dlf-grid-2">
+        <div class="dlf-card">
+            <h3 class="dlf-heading-md">You Need a CFO on This If:</h3>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-positive">&#10003;</span>
+                <span>You are considering a sale, capital raise, or partnership within 24 months</span>
+            </div>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-positive">&#10003;</span>
+                <span>Your EBITDA has never been normalised and you are unsure which add-backs are defensible</span>
+            </div>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-positive">&#10003;</span>
+                <span>Your largest client accounts for more than 15% of total revenue</span>
+            </div>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-positive">&#10003;</span>
+                <span>You have no signed contracts documenting recurring revenue relationships</span>
+            </div>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-positive">&#10003;</span>
+                <span>You do not have a data room, or your records would not survive two weeks of professional due diligence</span>
+            </div>
+        </div>
+
+        <div class="dlf-card">
+            <h3 class="dlf-heading-md">You Can Probably Wait If:</h3>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                <span>No exit event is on the horizon within three years and you are focused on growth</span>
+            </div>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                <span>Revenue is under $2M and the business model is still evolving</span>
+            </div>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                <span>You already have a corporate advisory firm or CFO managing the exit preparation</span>
+            </div>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                <span>Your primary concern is tax structuring for the sale (that is your accountant's and tax advisor's domain)</span>
+            </div>
+        </div>
+    </div>
+
+    <p>Here is the question worth sitting with: if a serious buyer approached you this week and asked for normalised EBITDA, a customer concentration report, recurring revenue documentation, and a three-year forecast model, could your finance function produce those within a fortnight? That is the real test of business exit planning readiness. If the answer is no, you do not have a timing problem. You have a preparation problem. And every month you wait is a month closer to the table without the numbers to defend your asking price.</p>
+
+    <p>Business exit planning is one of Virtual CFO Group's core services. The <a href="https://www.virtualcfogroup.com.au/what-we-do/">sale-readiness and valuation uplift engagement</a> is built around exactly this checklist. And if you want to understand how <a href="https://www.virtualcfogroup.com.au/business-valuation-australia/">business valuation in Australia</a> works from a CFO's desk, including EBITDA multiples by industry and what drives them up or down, that guide covers the complementary territory.</p>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 7. END CTA                                 -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-dark">
+    <span class="dlf-badge" style="background: rgba(37, 99, 235, 0.2); color: #93c5fd;">Take the Next Step</span>
+    <h2 class="dlf-heading-xl" style="color: white;">Start Your Exit Preparation Before the Clock Starts</h2>
+    <p style="max-width: 600px; margin: 0 auto 1.5rem; color: var(--slate-400);">A 30-minute conversation will map your current business sale readiness against what buyers actually require, and identify the highest-impact moves for your timeline.</p>
+    <a href="https://www.virtualcfogroup.com.au/contact-us/" class="dlf-btn">Book a Strategic Briefing &rarr;</a>
+    <p style="margin-top: 1.5rem; color: var(--slate-400);">
+        Or call directly: <a href="tel:0416504475" style="color: #93c5fd; text-decoration: none; font-weight: 700;">0416 504 475</a>
+    </p>
+    <p style="font-size: 0.85rem; color: var(--slate-500);">Mon – Fri, 9am – 5pm AEST</p>
+</div>
+
+</div></div>
+</body>
+</html>

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Three-Way Forecast</title>
+<style>
+body {
+    margin: 0;
+    padding: 2rem 1rem;
+    background: #f1f5f9;
+    font-family: system-ui, sans-serif;
+}
+.page-wrapper {
+    max-width: 1320px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 1.5rem;
+    padding: 3rem 4rem;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+}
+@media (max-width: 768px) {
+    .page-wrapper { padding: 1.5rem 1rem; }
+    body { padding: 1rem 0.5rem; }
+}
+</style>
+</head>
+<body>
+<div class="page-wrapper">
+<!--
+WORDPRESS SETUP:
+- Slug: three-way-forecast
+- Meta Title: Three-Way Forecast: Why You Only See One Third of the Picture
+- Meta Description: What a three-way forecast is, why your accountant only gives you P&L, and what changes when P&L, balance sheet and cash flow connect. By Matthew Thompson CPA.
+- Category: Industry News
+- Author: Matthew Thompson
+- Featured Image: A finance professional connecting three financial reports on a widescreen monitor showing linked P&L, balance sheet and cash flow projections — clean modern Australian office, warm lighting, strategic planning feel
+-->
+
+<style>
+:root {
+    --brand-900: #1e3a8a;
+    --brand-600: #2563eb;
+    --brand-700: #1d4ed8;
+    --slate-950: #0F172A;
+    --slate-900: #0f172a;
+    --slate-600: #475569;
+    --slate-500: #64748b;
+    --slate-400: #94a3b8;
+    --surface-light: #ffffff;
+    --surface-muted: #f8fafc;
+    --border-light: #e2e8f0;
+    --shadow-sm: 0 2px 6px rgba(15, 23, 42, .06);
+    --shadow-md: 0 10px 26px rgba(15, 23, 42, .12);
+    --radius-md: .75rem;
+    --radius-xl: 1.5rem;
+}
+
+.dlf-content {
+    font-family: "Kumbh Sans", system-ui, sans-serif;
+    line-height: 1.6;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.dlf-content h1,
+.dlf-content h2,
+.dlf-content h3,
+.dlf-content h4,
+.dlf-content h5,
+.dlf-content h6 {
+    color: var(--slate-950);
+}
+
+.dlf-dark h1,
+.dlf-dark h2,
+.dlf-dark h3,
+.dlf-dark h4,
+.dlf-dark h5,
+.dlf-dark h6 {
+    color: white;
+}
+
+.dlf-btn {
+  color: #ffffff !important;
+}
+
+.dlf-section { padding: 2rem 0; }
+.dlf-container { padding: 0 1rem; }
+
+.dlf-heading-xl {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: var(--slate-950);
+}
+
+.dlf-heading-lg {
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+    color: var(--slate-950);
+}
+
+.dlf-heading-md {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--slate-950);
+}
+
+.dlf-dark .dlf-heading-xl,
+.dlf-dark .dlf-heading-lg,
+.dlf-dark .dlf-heading-md,
+.dlf-hero-card .dlf-heading-xl,
+.dlf-hero-card .dlf-heading-lg,
+.dlf-hero-card .dlf-heading-md {
+    color: white;
+}
+
+.dlf-badge {
+    display: inline-block;
+    padding: .4rem 1rem;
+    border-radius: 9999px;
+    font-size: .75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--brand-600);
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.dlf-card {
+    background: var(--surface-light);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+    transition: .3s ease;
+    margin-bottom: 2rem;
+}
+
+.dlf-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.dlf-hero-card {
+    background: #0F172A;
+    backdrop-filter: blur(12px);
+    color: white;
+    padding: 3rem;
+    border-radius: var(--radius-xl);
+    margin: 2rem 0;
+}
+
+.dlf-grid {
+    display: grid;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.dlf-grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.dlf-grid-3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+
+.dlf-comparison {
+    background: var(--surface-light);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    border: 1px solid var(--border-light);
+    margin: 2rem 0;
+}
+
+.dlf-compare-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.dlf-compare-cell {
+    padding: 1.5rem;
+}
+
+.dlf-compare-cell:first-child {
+    background: var(--surface-muted);
+    border-right: 1px solid var(--border-light);
+    color: var(--slate-600);
+}
+
+.dlf-compare-cell:last-child {
+    font-weight: 700;
+    color: var(--brand-700);
+}
+
+.dlf-feature-row {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.dlf-icon {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.dlf-icon-positive { background: #dcfce7; color: #166534; }
+.dlf-icon-negative { background: #fef2f2; color: #dc2626; }
+
+.dlf-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem 2rem;
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    text-decoration: none;
+    background: var(--brand-600);
+    color: white;
+    transition: .3s ease;
+    margin: 1rem 0;
+}
+
+.dlf-btn:hover {
+    background: var(--brand-700);
+    transform: translateY(-2px);
+}
+
+.dlf-quote {
+    background: #eff6ff;
+    border-left: 4px solid var(--brand-600);
+    padding: 1.5rem;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    margin: 2rem 0;
+    font-style: italic;
+    color: var(--brand-900);
+}
+
+.dlf-dark {
+    background: var(--slate-950);
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: var(--radius-xl);
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.dlf-muted { color: var(--slate-600); }
+.dlf-center { text-align: center; }
+
+@media (max-width: 768px) {
+    .dlf-comparison {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .dlf-compare-row {
+        grid-template-columns: 1fr 1fr;
+        min-width: 680px;
+    }
+
+    .dlf-compare-cell:first-child {
+        border-right: 1px solid var(--border-light);
+    }
+
+    .dlf-grid-2, .dlf-grid-3 { grid-template-columns: 1fr; }
+}
+</style>
+
+<div class="dlf-content">
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 1. HERO SECTION                            -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-section dlf-center">
+    <span class="dlf-badge">Financial Modelling</span>
+    <h2 class="dlf-heading-xl">The Three-Way Forecast: Why Your Accountant Only Shows You One Third of the Picture</h2>
+    <p class="dlf-muted" style="max-width: 720px; margin: 0 auto 1rem;">Your accountant hands you a profit and loss statement. It says you made $480K last year. Your bank account says otherwise. The discrepancy is not an error. It is a missing two thirds of the story that a <strong>three-way forecast</strong> would have revealed before the gap became a problem. Financial forecasting for small business requires all three financial statements working together, not just one.</p>
+    <p class="dlf-muted" style="font-size: 0.85rem;">By <strong>Matthew Thompson CPA, CIMA, CGMA</strong> — Commercial Director, Virtual CFO Group &nbsp;|&nbsp; March 2026</p>
+
+    <div class="dlf-hero-card" style="text-align: left;">
+        <span class="dlf-badge" style="background: rgba(37, 99, 235, 0.2); color: #93c5fd;">Executive Summary</span>
+        <h3 class="dlf-heading-lg">Three Statements. One Integrated Model. A Completely Different View of Your Business.</h3>
+        <p>A <strong>three-way forecast</strong> links your projected profit and loss, balance sheet, and cash flow statement into a single model where changing one assumption updates all three simultaneously. Most Australian SMEs operate with a P&L only. That is like navigating with a speedometer but no fuel gauge and no map. This guide explains what an integrated financial model is, why the P&L alone misleads growing businesses, and what changes when directors can see profit, financial position, and cash impact in one connected view. Includes a worked example for a $6M Australian business making a real expansion decision.</p>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 2. PROBLEM SECTION                         -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-section">
+    <div class="dlf-grid dlf-grid-2">
+        <div>
+            <span class="dlf-badge">The Problem</span>
+            <h2 class="dlf-heading-lg">The P&L Delusion: Profitable on Paper, Broke in Practice</h2>
+            <p>A <a href="https://www.brokerdaily.au/lender/21117-the-5-big-trends-that-shaped-sme-lending-in-2025" target="_blank" rel="noopener">2025 Broker Daily analysis</a> of Australian SME lending trends found that 25% of small businesses still rely on instinct or experience alone and do not forecast cash flow at all. Those businesses are flying on a single instrument: the profit and loss statement. It tells them whether revenue exceeded expenses. It tells them nothing about when the cash arrives, where it is locked up, or whether the balance sheet can sustain the next decision.</p>
+            <p>This is not an accountant failing you. It is the structural limitation of the P&L as a standalone document. The P&L records revenue when it is earned, not when it is collected. It records expenses when they are incurred, not when they are paid. A $120K invoice issued in June appears as revenue in your June P&L. The client pays in August. For two months, that $120K exists on paper but not in your bank account.</p>
+
+            <div style="margin-top: 1.5rem;">
+                <div class="dlf-feature-row">
+                    <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                    <span><strong>Revenue is not cash:</strong> the P&L says you earned $480K but $195K of that is sitting in receivables that have not collected yet</span>
+                </div>
+                <div class="dlf-feature-row">
+                    <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                    <span><strong>Capital expenditure is invisible:</strong> a $150K equipment purchase does not appear on the P&L (only the depreciation does), but it drains cash immediately</span>
+                </div>
+                <div class="dlf-feature-row">
+                    <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                    <span><strong>Loan repayments disappear:</strong> principal repayments reduce your bank balance every month but never touch the P&L, only interest does</span>
+                </div>
+                <div class="dlf-feature-row">
+                    <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                    <span><strong>Working capital is a black hole:</strong> as revenue grows, more cash gets trapped in debtors and inventory before you see a dollar of it</span>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="dlf-card" style="background: var(--slate-950); color: white; border: none;">
+                <h3 class="dlf-heading-md" style="color: white;">The One-Third Problem</h3>
+                <p style="font-size: 1.1rem; line-height: 1.7;">Your P&L answers one question: did revenue exceed expenses? Your balance sheet answers a different question: what does the business own, owe, and what is the net position? Your cash flow statement answers the question that actually keeps you solvent: where did the cash go, and is there enough to meet next month's obligations? Operating on P&L alone is making decisions with one third of the available information. An integrated three-statement model connects all three.</p>
+                <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--slate-400);">Two thirds of the financial picture is missing from most SME boardrooms. That is not a reporting preference. It is a structural blind spot.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 3. FRAMEWORK SECTION — The Linked Lens     -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-section dlf-center">
+    <span class="dlf-badge">The Framework</span>
+    <h2 class="dlf-heading-lg">The Linked Lens: How a Three-Way Forecast Actually Works</h2>
+    <p class="dlf-muted" style="max-width: 700px; margin: 0 auto;">The Linked Lens is the principle behind every integrated financial model: three financial statements, connected by shared assumptions, updating simultaneously. Change one input and see the ripple across profit, financial position, and cash. Here is what each statement contributes to your cash flow forecasting and financial forecasting, and why none of them works alone.</p>
+
+    <div class="dlf-grid dlf-grid-3">
+        <div class="dlf-card" style="text-align: left;">
+            <span class="dlf-icon dlf-icon-positive" style="font-size: 1rem; width: 2rem; height: 2rem; margin-bottom: 1rem;">1</span>
+            <h3 class="dlf-heading-md">Profit &amp; Loss: The Performance Lens</h3>
+            <p><strong>What it shows:</strong> profitability, revenue growth, margin trends, and whether the core business model is working.</p>
+            <p><strong>What it hides:</strong> the timing of cash. Uncollected receivables, equipment purchases, and loan principal repayments never appear on the P&L.</p>
+        </div>
+
+        <div class="dlf-card" style="text-align: left;">
+            <span class="dlf-icon dlf-icon-positive" style="font-size: 1rem; width: 2rem; height: 2rem; margin-bottom: 1rem;">2</span>
+            <h3 class="dlf-heading-md">Balance Sheet: The Position Lens</h3>
+            <p><strong>What it shows:</strong> net asset position, cash locked in receivables, total debt, and the working capital buffer available to absorb shocks.</p>
+            <p><strong>What it hides:</strong> the trend. A single snapshot does not reveal that receivables are climbing quarterly or that the current ratio has been deteriorating for twelve months.</p>
+        </div>
+
+        <div class="dlf-card" style="text-align: left;">
+            <span class="dlf-icon dlf-icon-positive" style="font-size: 1rem; width: 2rem; height: 2rem; margin-bottom: 1rem;">3</span>
+            <h3 class="dlf-heading-md">Cash Flow Statement: The Survival Lens</h3>
+            <p><strong>What it shows:</strong> whether the business generates enough operating cash to fund itself, service debt, and sustain growth. This is the statement <a href="https://www.virtualcfogroup.com.au/cash-flow-forecasting-guide/">cash flow forecasting</a> is built on.</p>
+            <p><strong>What it hides:</strong> nothing, when linked to the other two. In isolation, it cannot explain <em>why</em> cash is moving the way it is.</p>
+        </div>
+    </div>
+
+    <div class="dlf-quote">
+        <strong>A P&L tells you if the engine is running. A balance sheet tells you how much fuel is in the tank. A cash flow statement tells you if you will reach the destination.</strong> The Linked Lens connects all three so every decision is tested against profit, position, and cash simultaneously. That is what financial modelling for small business looks like when it is done properly. It is also the foundation of effective cash flow forecasting.
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 4. EVIDENCE — Worked Example               -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-section">
+    <span class="dlf-badge">In Practice</span>
+    <h2 class="dlf-heading-lg">Worked Example: What Three Statements Reveal That One Cannot</h2>
+    <p>Consider a construction services business in Brisbane turning over $6M with 28 staff. The director wants to take on a major commercial fit-out contract worth $1.4M over eight months. The accountant has prepared the annual P&L. It shows a healthy $540K net profit. The director's instinct says yes. Here is what happens when you run the decision through each lens.</p>
+
+    <div class="dlf-grid dlf-grid-2" style="margin-top: 1.5rem;">
+        <div>
+            <h3 class="dlf-heading-md">What the P&L Says: Take the Contract</h3>
+            <p>The $1.4M contract carries an estimated 32% gross margin after direct labour and materials. That adds $448K in gross profit across eight months. After allocating overhead, the incremental net contribution is approximately $310K. The P&L says this contract grows profit by 57%.</p>
+
+            <h3 class="dlf-heading-md" style="margin-top: 1.5rem;">What the Balance Sheet Reveals: You Need Working Capital First</h3>
+            <p>The contract requires $180K in materials purchased in month one, before any progress claim is invoiced. Labour costs run $65K per month from day one. The first progress claim ($350K) is invoiced at the end of month two, but construction industry payment terms mean collection arrives at day 52 on average, according to the <a href="https://www.asbfeo.gov.au/" target="_blank" rel="noopener">Australian Small Business and Family Enterprise Ombudsman</a>.</p>
+            <p>The balance sheet projection shows receivables swell by $350K in month three while payables and accrued labour have already consumed $310K of existing cash. Net working capital drops from $420K to $110K. One delayed progress payment and the business is scrambling.</p>
+
+            <h3 class="dlf-heading-md" style="margin-top: 1.5rem;">What the Cash Flow Forecast Exposes: The Timing Trap</h3>
+            <p>The cash flow statement maps the exact week the problem hits. Week 9: materials payment of $95K due. Week 10: fortnightly payroll of $52K plus superannuation of $6,240 (under <a href="https://www.ato.gov.au/businesses-and-organisations/super-for-employers/payday-super" target="_blank" rel="noopener">payday super rules</a>). Week 11: a quarterly BAS payment of $68K. Total outflows in a three-week window: $221,240. Total inflows in the same window: $0 (first progress claim has not collected yet). Without a linked three-statement model, the director signs the contract on Tuesday and discovers the cash crater on a Friday afternoon nine weeks later.</p>
+        </div>
+
+        <div>
+            <div class="dlf-card" style="background: var(--slate-950); color: white; border: none;">
+                <h3 class="dlf-heading-md" style="color: white;">Three Lenses, Three Different Answers</h3>
+                <p style="font-size: 1rem; line-height: 1.7;"><strong>P&L only:</strong> "Take the contract. It adds $310K in profit."</p>
+                <p style="font-size: 1rem; line-height: 1.7; margin-top: 0.75rem;"><strong>P&L + balance sheet:</strong> "Take the contract, but you need $310K in working capital before it becomes self-funding."</p>
+                <p style="font-size: 1rem; line-height: 1.7; margin-top: 0.75rem;"><strong>All three statements linked:</strong> "Take the contract. Arrange a $200K overdraft facility before signing. Draw it down in week 7. First progress payment covers the draw by week 14. Net interest cost: $1,900. Net profit after financing: $308K."</p>
+                <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--slate-400);">Same decision. Vastly different levels of preparedness. The linked model does not change the answer. It changes whether you survive the journey to get there.</p>
+            </div>
+
+            <h3 class="dlf-heading-md" style="margin-top: 1.5rem;">Why This Matters Right Now in Australia</h3>
+            <p>Average payment terms for Australian SMEs now exceed 45 days, up 20% year on year, and <a href="https://insidesmallbusiness.com.au/latest-news/australias-small-business-cash-crunch-a-2026-payment-forecast" target="_blank" rel="noopener">one in three SMEs report</a> that late payments have blocked them from taking on new work. The gap between invoicing and collection is widening. For businesses making growth decisions on P&L data alone, that widening gap is invisible until it becomes a crisis.</p>
+            <p>Financial forecasting for small business needs to account for this reality. A P&L projection that assumes revenue equals cash is a fiction. An integrated model built on actual debtor collection patterns and creditor payment schedules reflects what happens in the real world, not the accounting world. This is why financial modelling for small business matters: it replaces assumptions with connected, testable projections.</p>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 5. MID-ARTICLE CTA                         -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-section">
+    <p>If you are making growth decisions with a P&L that tells you one third of the story, the gap is already shaping your outcomes. Building an integrated three-statement model is not a weekend project. It is a structured engagement that connects your existing accounting data to a forward-looking model. <a href="https://www.virtualcfogroup.com.au/schedule-assessment/">A free 30-minute assessment</a> is where we map your current financial visibility against what your business actually needs to make the next decision with confidence.</p>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 6. QUALIFIER / REFLECTION SECTION          -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-section">
+    <h2 class="dlf-heading-lg">Does Your Financial Modelling Pass the Three-Statement Test?</h2>
+    <p>The distinction between businesses that grow with control and businesses that grow into trouble often comes down to one structural question: how many financial statements are connected in your forward-looking model?</p>
+
+    <div class="dlf-comparison">
+        <div class="dlf-compare-row" style="background: var(--slate-950); color: white;">
+            <div class="dlf-compare-cell" style="background: var(--slate-950); color: white; font-weight: 700; border-right: 1px solid var(--slate-600);">P&L-Only Forecasting</div>
+            <div class="dlf-compare-cell" style="color: white;">Linked Three-Statement Model</div>
+        </div>
+        <div class="dlf-compare-row">
+            <div class="dlf-compare-cell">Shows profit but not whether cash supports it</div>
+            <div class="dlf-compare-cell">Shows profit, cash impact, and balance sheet movement together</div>
+        </div>
+        <div class="dlf-compare-row">
+            <div class="dlf-compare-cell">Capital expenditure invisible until the bank balance drops</div>
+            <div class="dlf-compare-cell">Capex modelled across all three statements: depreciation, cash outflow, asset on balance sheet</div>
+        </div>
+        <div class="dlf-compare-row">
+            <div class="dlf-compare-cell">Working capital changes hidden in the gap between invoicing and collection</div>
+            <div class="dlf-compare-cell">Debtor days and creditor days explicitly modelled, cash timing visible week by week</div>
+        </div>
+        <div class="dlf-compare-row">
+            <div class="dlf-compare-cell">Loan drawdowns and repayments absent from the forecast</div>
+            <div class="dlf-compare-cell">Debt servicing modelled: interest hits P&L, principal hits cash flow, balance reduces on balance sheet</div>
+        </div>
+        <div class="dlf-compare-row">
+            <div class="dlf-compare-cell">Scenario modelling limited to "what if revenue grows 10%?"</div>
+            <div class="dlf-compare-cell">Scenario modelling answers: "what does 10% growth do to cash, receivables, debt capacity, and the balance sheet?"</div>
+        </div>
+    </div>
+
+    <div class="dlf-grid dlf-grid-2">
+        <div class="dlf-card">
+            <h3 class="dlf-heading-md">An Integrated Financial Model Is Essential If:</h3>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-positive">&#10003;</span>
+                <span>You are making investment, hiring, or expansion decisions exceeding $100K</span>
+            </div>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-positive">&#10003;</span>
+                <span>Your business has significant working capital requirements (debtors, inventory, progress claims)</span>
+            </div>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-positive">&#10003;</span>
+                <span>You need to present financial projections to a bank, investor, or board</span>
+            </div>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-positive">&#10003;</span>
+                <span>Revenue is growing but cash feels tighter than the profit numbers suggest</span>
+            </div>
+        </div>
+
+        <div class="dlf-card">
+            <h3 class="dlf-heading-md">A P&L Forecast May Suffice If:</h3>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                <span>Revenue is under $1M with simple cash-on-delivery transactions and no debtors</span>
+            </div>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                <span>No significant capital expenditure or debt is on the horizon</span>
+            </div>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                <span>The business model has minimal working capital requirements</span>
+            </div>
+        </div>
+    </div>
+
+    <p>Here is the reflection worth sitting with: your accountant produces a P&L and a balance sheet at year-end for compliance purposes. Those are historical documents. Financial forecasting for small business takes the same three statements and projects them forward, linked by the assumptions that drive your business. The difference is not more paperwork. It is the difference between knowing what happened and knowing what happens next.</p>
+
+    <p>If your current <a href="https://www.virtualcfogroup.com.au/cash-flow-management-small-business-framework/">cash flow management process</a> relies on a standalone spreadsheet forecast disconnected from your P&L and balance sheet, the model is incomplete. If your <a href="https://www.virtualcfogroup.com.au/cash-flow-forecasting-guide/">cash flow forecasting</a> does not automatically update when you change a revenue assumption or add a hire, it is not a linked model. And if your bank has ever asked for projected financials and you could not produce all three statements in a consistent, integrated format within a week, then the gap between your current capability and what your business needs is exactly where a <a href="https://www.virtualcfogroup.com.au/what-we-do/">virtual CFO engagement</a> operates.</p>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 7. END CTA                                 -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-dark">
+    <span class="dlf-badge" style="background: rgba(37, 99, 235, 0.2); color: #93c5fd;">Take the Next Step</span>
+    <h2 class="dlf-heading-xl" style="color: white;">See All Three Statements Before You Make Your Next Decision</h2>
+    <p style="max-width: 600px; margin: 0 auto 1.5rem; color: var(--slate-400);">A 30-minute conversation will map your current financial visibility, identify what is missing from your forward-looking model, and show you what a connected three-way forecast looks like for a business your size.</p>
+    <a href="https://www.virtualcfogroup.com.au/contact-us/" class="dlf-btn">Book a Strategic Briefing &rarr;</a>
+    <p style="margin-top: 1.5rem; color: var(--slate-400);">
+        Or call directly: <a href="tel:0416504475" style="color: #93c5fd; text-decoration: none; font-weight: 700;">0416 504 475</a>
+    </p>
+    <p style="font-size: 0.85rem; color: var(--slate-500);">Mon – Fri, 9am – 5pm AEST</p>
+</div>
+
+</div></div>
+</body>
+</html>

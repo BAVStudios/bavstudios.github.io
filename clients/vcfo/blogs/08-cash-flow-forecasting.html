@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Cash Flow Forecasting Guide</title>
+<style>
+body {
+    margin: 0;
+    padding: 2rem 1rem;
+    background: #f1f5f9;
+    font-family: system-ui, sans-serif;
+}
+.page-wrapper {
+    max-width: 1320px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 1.5rem;
+    padding: 3rem 4rem;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+}
+@media (max-width: 768px) {
+    .page-wrapper { padding: 1.5rem 1rem; }
+    body { padding: 1rem 0.5rem; }
+}
+</style>
+</head>
+<body>
+<div class="page-wrapper">
+<!--
+WORDPRESS SETUP:
+- Slug: cash-flow-forecasting-guide
+- Meta Title: Cash Flow Forecasting: Complete Guide for Australian SMEs (2026)
+- Meta Description: Build a cash flow forecast that actually works. Three-way forecast framework, BAS timing, worked example with real numbers. By Colin Wright CPA.
+- Category: Industry News
+- Author: Colin Wright
+- Featured Image: A senior finance professional building a cash flow forecast model on a widescreen monitor, spreadsheet visible with weekly cash projections — clean modern Australian office, natural light, strategic planning feel.
+-->
+
+<style>
+:root {
+    --brand-900: #1e3a8a;
+    --brand-600: #2563eb;
+    --brand-700: #1d4ed8;
+    --slate-950: #0F172A;
+    --slate-900: #0f172a;
+    --slate-600: #475569;
+    --slate-500: #64748b;
+    --slate-400: #94a3b8;
+    --surface-light: #ffffff;
+    --surface-muted: #f8fafc;
+    --border-light: #e2e8f0;
+    --shadow-sm: 0 2px 6px rgba(15, 23, 42, .06);
+    --shadow-md: 0 10px 26px rgba(15, 23, 42, .12);
+    --radius-md: .75rem;
+    --radius-xl: 1.5rem;
+}
+
+.dlf-content {
+    font-family: "Kumbh Sans", system-ui, sans-serif;
+    line-height: 1.6;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.dlf-content h1,
+.dlf-content h2,
+.dlf-content h3,
+.dlf-content h4,
+.dlf-content h5,
+.dlf-content h6 {
+    color: var(--slate-950);
+}
+
+.dlf-dark h1,
+.dlf-dark h2,
+.dlf-dark h3,
+.dlf-dark h4,
+.dlf-dark h5,
+.dlf-dark h6 {
+    color: white;
+}
+
+.dlf-btn {
+  color: #ffffff !important;
+}
+
+.dlf-section { padding: 2rem 0; }
+.dlf-container { padding: 0 1rem; }
+
+.dlf-heading-xl {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: var(--slate-950);
+}
+
+.dlf-heading-lg {
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+    color: var(--slate-950);
+}
+
+.dlf-heading-md {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--slate-950);
+}
+
+.dlf-dark .dlf-heading-xl,
+.dlf-dark .dlf-heading-lg,
+.dlf-dark .dlf-heading-md,
+.dlf-hero-card .dlf-heading-xl,
+.dlf-hero-card .dlf-heading-lg,
+.dlf-hero-card .dlf-heading-md {
+    color: white;
+}
+
+.dlf-badge {
+    display: inline-block;
+    padding: .4rem 1rem;
+    border-radius: 9999px;
+    font-size: .75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--brand-600);
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.dlf-card {
+    background: var(--surface-light);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+    transition: .3s ease;
+    margin-bottom: 2rem;
+}
+
+.dlf-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.dlf-hero-card {
+    background: #0F172A;
+    backdrop-filter: blur(12px);
+    color: white;
+    padding: 3rem;
+    border-radius: var(--radius-xl);
+    margin: 2rem 0;
+}
+
+.dlf-grid {
+    display: grid;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.dlf-grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.dlf-grid-3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+
+.dlf-comparison {
+    background: var(--surface-light);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    border: 1px solid var(--border-light);
+    margin: 2rem 0;
+}
+
+.dlf-compare-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.dlf-compare-cell {
+    padding: 1.5rem;
+}
+
+.dlf-compare-cell:first-child {
+    background: var(--surface-muted);
+    border-right: 1px solid var(--border-light);
+    color: var(--slate-600);
+}
+
+.dlf-compare-cell:last-child {
+    font-weight: 700;
+    color: var(--brand-700);
+}
+
+.dlf-feature-row {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.dlf-icon {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.dlf-icon-positive { background: #dcfce7; color: #166534; }
+.dlf-icon-negative { background: #fef2f2; color: #dc2626; }
+
+.dlf-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem 2rem;
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    text-decoration: none;
+    background: var(--brand-600);
+    color: white;
+    transition: .3s ease;
+    margin: 1rem 0;
+}
+
+.dlf-btn:hover {
+    background: var(--brand-700);
+    transform: translateY(-2px);
+}
+
+.dlf-quote {
+    background: #eff6ff;
+    border-left: 4px solid var(--brand-600);
+    padding: 1.5rem;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    margin: 2rem 0;
+    font-style: italic;
+    color: var(--brand-900);
+}
+
+.dlf-dark {
+    background: var(--slate-950);
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: var(--radius-xl);
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.dlf-muted { color: var(--slate-600); }
+.dlf-center { text-align: center; }
+
+@media (max-width: 768px) {
+    .dlf-comparison {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .dlf-compare-row {
+        grid-template-columns: 1fr 1fr;
+        min-width: 680px;
+    }
+
+    .dlf-compare-cell:first-child {
+        border-right: 1px solid var(--border-light);
+    }
+
+    .dlf-grid-2, .dlf-grid-3 { grid-template-columns: 1fr; }
+}
+</style>
+
+<div class="dlf-content">
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 1. HERO SECTION                            -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-section dlf-center">
+    <span class="dlf-badge">Cash Flow Forecasting</span>
+    <h2 class="dlf-heading-xl">Cash Flow Forecasting: The Complete Guide for Australian SMEs</h2>
+    <p class="dlf-muted" style="max-width: 720px; margin: 0 auto 1rem;">Australia recorded 14,722 corporate insolvencies in 2024-25, the highest level since 1999-2000. The most common cause cited? Inadequate cash flow. Not weak revenue. Not poor products. The timing of money in versus money out. Cash flow forecasting is how you see that timing problem before it becomes terminal.</p>
+    <p class="dlf-muted" style="font-size: 0.85rem;">By <strong>Colin Wright CPA</strong> — Operations Director, Virtual CFO Group &nbsp;|&nbsp; March 2026</p>
+
+    <div class="dlf-hero-card" style="text-align: left;">
+        <span class="dlf-badge" style="background: rgba(37, 99, 235, 0.2); color: #93c5fd;">Executive Summary</span>
+        <h3 class="dlf-heading-lg">The Forecasting System That Turns Cash Surprises into Cash Decisions</h3>
+        <p>A <strong>cash flow forecast</strong> is the single most important financial tool an Australian SME can build. Not a budget. Not a P&L. A week-by-week projection of every dollar entering and leaving your business over the next 13 weeks minimum. This guide introduces <strong>The Forecast Architecture</strong>: a three-layer system that connects your weekly cash forecast, your <strong>three-way forecast</strong> (P&L, balance sheet, and cash flow statement working together), and the Australian compliance calendar that governs when your biggest outflows land. You will find a worked example with real numbers for a $7M business, the specific BAS and PAYG timing traps that catch growing businesses, and the process that eliminates the <strong>cash flow problems small business</strong> owners face every quarter.</p>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 2. PROBLEM SECTION                         -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-section">
+    <div class="dlf-grid dlf-grid-2">
+        <div>
+            <span class="dlf-badge">The Problem</span>
+            <h2 class="dlf-heading-lg">Why Growing Businesses Fail at Cash Flow Forecasting</h2>
+            <p>Most Australian SMEs do not forecast cash flow. They estimate it. They open the banking app on Monday morning, check the balance, mentally subtract this week's payroll and supplier payments, and call that a plan. It is not a plan. It is a reaction. And it is the root cause of the <strong>cash flow problems small business</strong> owners experience repeatedly without understanding why.</p>
+            <p><a href="https://www.asic.gov.au/about-asic/corporate-publications/statistics/insolvency-statistics/" target="_blank" rel="noopener">ASIC's 2024-25 data</a> revealed that corporate insolvencies hit their highest level in 25 years, with the ratio of companies entering external administration rising to 0.41% of all registered companies. Director-driven appointments (voluntary liquidations and restructurings) accounted for 72% of those failures. These were not businesses destroyed by a single event. They were businesses that ran out of runway because nobody modelled the road ahead.</p>
+
+            <div style="margin-top: 1.5rem;">
+                <div class="dlf-feature-row">
+                    <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                    <span><strong>No forward visibility:</strong> directors discover cash shortfalls when they arrive, not six weeks before when there is still time to act</span>
+                </div>
+                <div class="dlf-feature-row">
+                    <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                    <span><strong>P&L-only thinking:</strong> a profitable quarter still bankrupts you if receivables sit at 50 days and payables are due in 14</span>
+                </div>
+                <div class="dlf-feature-row">
+                    <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                    <span><strong>Compliance calendar blindspots:</strong> BAS quarters, PAYG instalments, and the new payday super obligations stack up in the same weeks without warning</span>
+                </div>
+                <div class="dlf-feature-row">
+                    <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                    <span><strong>Static budgets pretending to be forecasts:</strong> an annual budget created in July tells you nothing about what happens in February when your largest client pays 21 days late</span>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="dlf-card" style="background: var(--slate-950); color: white; border: none;">
+                <h3 class="dlf-heading-md" style="color: white;">The Forecast Gap</h3>
+                <p style="font-size: 1.1rem; line-height: 1.7;">A budget tells you what you planned. A P&L tells you what happened. Neither tells you what happens next week, next month, or next quarter to the actual cash in your bank account. That is the forecast gap. Every business that has scrambled to cover payroll, delayed a supplier payment, or drawn down an emergency facility at unfavourable terms has experienced it. <strong>Cash flow forecasting</strong> closes that gap permanently.</p>
+                <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--slate-400);">The question is not whether your business can afford to forecast. It is what the last cash surprise cost you.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 3. FRAMEWORK SECTION — The Forecast Architecture -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-section dlf-center">
+    <span class="dlf-badge">The Framework</span>
+    <h2 class="dlf-heading-lg">The Forecast Architecture: Three Layers of Financial Visibility</h2>
+    <p class="dlf-muted" style="max-width: 700px; margin: 0 auto;">This is <strong>The Forecast Architecture</strong>. Most businesses that attempt cash flow forecasting build a single spreadsheet and call it done. That is layer one of three. The businesses that never get caught by a cash surprise operate all three layers simultaneously. Each layer answers a different question at a different time horizon.</p>
+
+    <div class="dlf-grid dlf-grid-3">
+        <div class="dlf-card" style="text-align: left;">
+            <span class="dlf-icon dlf-icon-positive" style="font-size: 1rem; width: 2rem; height: 2rem; margin-bottom: 1rem;">1</span>
+            <h3 class="dlf-heading-md">Layer 1: The 13-Week Cash Flow Forecast</h3>
+            <p><strong>Time horizon:</strong> 0 to 13 weeks. <strong>Updated:</strong> weekly.</p>
+            <p>The operational layer. Every confirmed receivable, committed payable, payroll run, and compliance obligation mapped week-by-week across the next quarter. Weeks one to four are 90%+ accurate; weeks five to thirteen use conservative pipeline estimates.</p>
+            <p><strong>What it answers:</strong> "Will we have enough cash to meet our obligations every week for the next three months?"</p>
+        </div>
+
+        <div class="dlf-card" style="text-align: left;">
+            <span class="dlf-icon dlf-icon-positive" style="font-size: 1rem; width: 2rem; height: 2rem; margin-bottom: 1rem;">2</span>
+            <h3 class="dlf-heading-md">Layer 2: The Three-Way Forecast</h3>
+            <p><strong>Time horizon:</strong> 12 to 36 months. <strong>Updated:</strong> monthly.</p>
+            <p>Links your projected P&L, balance sheet, and cash flow statement into a single integrated model. Change one assumption and all three statements update simultaneously.</p>
+            <p><strong>What it answers:</strong> "How does this business decision affect our profit, our financial position, and our cash?"</p>
+        </div>
+
+        <div class="dlf-card" style="text-align: left;">
+            <span class="dlf-icon dlf-icon-positive" style="font-size: 1rem; width: 2rem; height: 2rem; margin-bottom: 1rem;">3</span>
+            <h3 class="dlf-heading-md">Layer 3: The Compliance Calendar</h3>
+            <p><strong>Time horizon:</strong> 12 months rolling. <strong>Updated:</strong> quarterly.</p>
+            <p>Maps every <a href="https://www.ato.gov.au/businesses-and-organisations/preparing-lodging-and-paying/business-activity-statements-bas/due-dates-for-lodging-and-paying-your-bas" target="_blank" rel="noopener">ATO obligation</a> against your cash position: quarterly BAS, annual income tax, FBT, payroll tax, and from July 2026, payday superannuation on every pay cycle.</p>
+            <p><strong>What it answers:</strong> "When do our biggest non-negotiable outflows land, and is our cash position prepared for them?"</p>
+        </div>
+    </div>
+
+    <div class="dlf-quote">
+        <strong>A forecast without all three layers is a partial answer to a complete question.</strong> Layer 1 tells you if you survive the quarter. Layer 2 tells you if your strategy is financially sound. Layer 3 tells you when the ATO will test both. Build all three. Update them on rhythm. That is the architecture.
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 4. EVIDENCE — Three-Way Forecast Deep Dive + Worked Example -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-section">
+    <span class="dlf-badge">In Practice</span>
+    <h2 class="dlf-heading-lg">Building a Three-Way Forecast: Worked Example for a $7M Business</h2>
+    <p>The <strong>three-way forecast</strong> is where most businesses stall. They have a P&L. They might have a budget. But the balance sheet and cash flow projections either do not exist or are disconnected from the income statement. Here is how the three statements connect, and what that connection reveals for a real Australian business scenario.</p>
+
+    <h3 class="dlf-heading-md" style="margin-top: 2rem;">The Setup</h3>
+    <p>A professional services firm in Melbourne. Annual revenue: $7M. Staff: 35 (annual payroll: $2.8M). Average debtor days: 38. Average creditor days: 21. The business is profitable on paper. The P&L shows an operating profit of $630K. The director wants to open a second office in Brisbane, requiring $280K in fit-out and an additional $420K in annual staffing costs. The question: can the business fund this expansion without external debt?</p>
+
+    <div class="dlf-grid dlf-grid-2" style="margin-top: 1.5rem;">
+        <div>
+            <h3 class="dlf-heading-md">What the P&L Says</h3>
+            <p>Revenue increases by $1.2M in year two from the Brisbane office. Operating costs increase by $780K (staff, rent, overheads). Net incremental profit: $420K. The P&L says yes, expand.</p>
+
+            <h3 class="dlf-heading-md" style="margin-top: 1.5rem;">What the Balance Sheet Reveals</h3>
+            <p>The $280K fit-out is a capital expenditure. It does not appear on the P&L (only the depreciation does). But it hits cash immediately. The 35 existing staff generate $730,000 in receivables at any given time ($7M &divide; 365 &times; 38 debtor days). Adding Brisbane staff increases that receivable balance by $125,000 before the first dollar of Brisbane revenue collects. Total upfront cash demand: $405,000 in the first 90 days before the P&L registers a material uplift.</p>
+
+            <h3 class="dlf-heading-md" style="margin-top: 1.5rem;">What the Cash Flow Statement Exposes</h3>
+            <p>Layer in the compliance calendar. The Brisbane expansion starts in August. The Q1 BAS payment (28 October) includes GST on all September invoicing. <a href="https://www.ato.gov.au/businesses-and-organisations/super-for-employers/payday-super/about-payday-super" target="_blank" rel="noopener">Payday super</a> on new Brisbane staff ($50,400 annually at 12% of $420K payroll) now flows fortnightly, not quarterly. The cash flow statement shows the business hits a $185,000 trough in week 11 of the expansion, three weeks before the first meaningful Brisbane receivable collects.</p>
+        </div>
+
+        <div>
+            <div class="dlf-card" style="background: var(--slate-950); color: white; border: none;">
+                <h3 class="dlf-heading-md" style="color: white;">Three Statements, Three Different Answers</h3>
+                <p style="font-size: 1rem; line-height: 1.7;"><strong>P&L alone:</strong> "Expand. The numbers work." <strong>P&L + balance sheet:</strong> "Expand, but you need $405K in working capital first." <strong>All three statements linked:</strong> "Expand, but arrange a $200K facility before August, draw it down in week 8, repay by week 18 when Brisbane collections stabilise."</p>
+                <p style="margin-top: 1.5rem; font-size: 1rem; line-height: 1.7;">The P&L said yes. The <strong>three-way forecast</strong> said yes, but here is exactly how to fund it without risking the core business. That is the difference between a forecast and a guess.</p>
+            </div>
+
+            <h3 class="dlf-heading-md" style="margin-top: 1.5rem;">The Australian Compliance Layer</h3>
+            <p>For this $7M business, the annual compliance cash outflows are substantial. Quarterly BAS payments averaging $175,000 each (GST + PAYG withholding). PAYG instalments on company income. Payroll tax at 4.85% above the $900,000 threshold in Victoria. Workers compensation premiums. And from July 2026, superannuation on every pay run rather than quarterly in arrears.</p>
+
+            <p>The <a href="https://www.rba.gov.au/statistics/cash-rate/" target="_blank" rel="noopener">RBA cash rate</a> sits at 3.85% as of February 2026, with the average SME variable lending rate at approximately 7.1%. Drawing a $200K facility for 10 weeks at that rate costs roughly $2,700 in interest. Arranging that facility proactively (with a modelled forecast to present to the bank) costs $2,700. Arranging it in a panic at week 11 when the account is already tight costs significantly more in rate premiums, rushed documentation fees, and the reputational cost of approaching your bank from a position of weakness.</p>
+        </div>
+    </div>
+
+    <h3 class="dlf-heading-md" style="margin-top: 2rem;">The BAS Timing Trap: A Cash Flow Forecasting Template for Quarterly Obligations</h3>
+    <p>Every Australian business on quarterly BAS reporting faces four predictable cash pressure points each year. The due dates for 2025-26 are 28 October, 28 February, 28 April, and 28 July. Miss a deadline and the <a href="https://www.ato.gov.au/" target="_blank" rel="noopener">ATO</a> issues failure-to-lodge penalties automatically: $313 per period for businesses under $1M turnover, $626 for businesses between $1M and $20M.</p>
+
+    <p>But the real cost is not the penalty. It is the cash flow disruption. A $7M business with a 10% net GST obligation remits approximately $175,000 per quarter. If that payment lands in the same week as a fortnightly payroll run of $107,000 (for 35 staff at $2.8M annual payroll) plus the new payday super obligation of $12,900, the total outflow for a single week exceeds $294,000. Without a forecast, that week arrives as a crisis. With a forecast, you have been setting aside $13,500 per week into a BAS reserve account since the quarter began.</p>
+
+    <p>Your <strong>cash flow forecasting template</strong> should include a dedicated line for each compliance obligation, plotted to the exact week it falls due. GST collected is not your money. PAYG withheld is not your money. Treating it as available cash is the most common <strong>cash flow problem small business</strong> owners create for themselves.</p>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 5. MID-ARTICLE CTA                         -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-section">
+    <p>If your business does not currently have a three-way forecast, or if your cash flow forecasting consists of a spreadsheet that gets updated when things feel tight, the gap is already costing you. Not in penalties. In the decisions you are deferring because you cannot see the financial impact clearly enough to commit. <a href="https://www.virtualcfogroup.com.au/schedule-assessment/">A free 30-minute assessment</a> is where we build that visibility: mapping your current forecast capability against what your business actually needs.</p>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 6. QUALIFIER / REFLECTION SECTION          -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-section">
+    <h2 class="dlf-heading-lg">Does Your Forecast Pass the Stress Test?</h2>
+    <p>A forecast is only useful if it holds up under pressure. Here is how to tell whether your current approach is a genuine forecasting system or a dressed-up bank balance check.</p>
+
+    <div class="dlf-comparison">
+        <div class="dlf-compare-row" style="background: var(--slate-950); color: white;">
+            <div class="dlf-compare-cell" style="background: var(--slate-950); color: white; font-weight: 700; border-right: 1px solid var(--slate-600);">Forecast in Name Only</div>
+            <div class="dlf-compare-cell" style="color: white;">The Forecast Architecture</div>
+        </div>
+        <div class="dlf-compare-row">
+            <div class="dlf-compare-cell">Updated monthly (or when the director remembers)</div>
+            <div class="dlf-compare-cell">13-week forecast updated every Monday without exception</div>
+        </div>
+        <div class="dlf-compare-row">
+            <div class="dlf-compare-cell">P&L budget only, no balance sheet or cash flow linkage</div>
+            <div class="dlf-compare-cell">Three-way forecast: P&L, balance sheet, and cash flow integrated</div>
+        </div>
+        <div class="dlf-compare-row">
+            <div class="dlf-compare-cell">BAS treated as a lump sum surprise every quarter</div>
+            <div class="dlf-compare-cell">BAS obligation accrued weekly, reserved progressively</div>
+        </div>
+        <div class="dlf-compare-row">
+            <div class="dlf-compare-cell">Single scenario: "this is what we think will happen"</div>
+            <div class="dlf-compare-cell">Three scenarios: base, stress, and growth cases modelled</div>
+        </div>
+        <div class="dlf-compare-row">
+            <div class="dlf-compare-cell">Payday super not yet modelled</div>
+            <div class="dlf-compare-cell">Super obligation mapped to every pay cycle from July 2026</div>
+        </div>
+        <div class="dlf-compare-row">
+            <div class="dlf-compare-cell">Forecast lives in a spreadsheet nobody owns</div>
+            <div class="dlf-compare-cell">Forecast owned by a named person, reviewed with the director weekly</div>
+        </div>
+    </div>
+
+    <div class="dlf-grid dlf-grid-2">
+        <div class="dlf-card">
+            <h3 class="dlf-heading-md">Your Forecast Architecture Is Working If:</h3>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-positive">&#10003;</span>
+                <span>You can state your cash position for any week in the next 13 weeks within 5 minutes</span>
+            </div>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-positive">&#10003;</span>
+                <span>Your last BAS payment was fully funded from a reserve account, not from the operating balance</span>
+            </div>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-positive">&#10003;</span>
+                <span>You can model the cash impact of hiring two staff by opening a file, not by starting a new spreadsheet</span>
+            </div>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-positive">&#10003;</span>
+                <span>The July 2026 payday super transition is already reflected in your forward cash projections</span>
+            </div>
+        </div>
+
+        <div class="dlf-card">
+            <h3 class="dlf-heading-md">Your Forecast Needs Rebuilding If:</h3>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                <span>The last time you checked your cash forecast was more than seven days ago</span>
+            </div>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                <span>Your forecast does not include a balance sheet projection (it is a P&L budget, not a three-way forecast)</span>
+            </div>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                <span>You have been surprised by a cash shortfall in the past 12 months despite the business being profitable</span>
+            </div>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                <span>Your bank or investors have asked for forward projections and you could not produce them within 48 hours</span>
+            </div>
+        </div>
+    </div>
+
+    <p>A proper <strong>cash flow forecasting template</strong> should include all three layers: weekly operational cash, monthly three-way projections, and the annual compliance calendar. Without that integration, you are forecasting in fragments.</p>
+
+    <p>The reflection worth sitting with: if your revenue dropped 20% next quarter (your second-largest client pauses, a project slips, a seasonal trough deepens), does your forecast show you the exact week your cash position becomes critical? Does it show you the two or three actions you take in week one to prevent the crisis in week eight? If the answer is no, you have a reporting system, not a forecasting system. Reporting tells you what happened. Forecasting tells you what to do.</p>
+
+    <p>Building The Forecast Architecture is not a one-person job for the founder, nor is it something your bookkeeper was hired to deliver. It sits in the space between operational accounting and strategic finance. That space is exactly where a <a href="https://www.virtualcfogroup.com.au/what-we-do/">virtual CFO engagement</a> operates. For the <a href="https://www.virtualcfogroup.com.au/cash-flow-management-small-business-framework/">cash flow management framework</a> that underpins this forecasting work, and for the <a href="https://www.virtualcfogroup.com.au/how-to-improve-cash-flow-small-business/">tactical levers that improve cash conversion</a> alongside it, those guides complete the picture.</p>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 7. END CTA                                 -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-dark">
+    <span class="dlf-badge" style="background: rgba(37, 99, 235, 0.2); color: #93c5fd;">Take the Next Step</span>
+    <h2 class="dlf-heading-xl" style="color: white;">Stop Guessing. Start Modelling.</h2>
+    <p style="max-width: 600px; margin: 0 auto 1.5rem; color: var(--slate-400);">A 30-minute conversation will map your current forecasting capability, identify the structural gaps, and show you what a three-layer Forecast Architecture looks like for a business your size.</p>
+    <a href="https://www.virtualcfogroup.com.au/contact-us/" class="dlf-btn">Book a Strategic Briefing &rarr;</a>
+    <p style="margin-top: 1.5rem; color: var(--slate-400);">
+        Or call directly: <a href="tel:0416504475" style="color: #93c5fd; text-decoration: none; font-weight: 700;">0416 504 475</a>
+    </p>
+    <p style="font-size: 0.85rem; color: var(--slate-500);">Mon – Fri, 9am – 5pm AEST</p>
+</div>
+
+</div></div>
+</body>
+</html>

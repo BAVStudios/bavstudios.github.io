@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Part-Time CFO</title>
+<style>
+body {
+    margin: 0;
+    padding: 2rem 1rem;
+    background: #f1f5f9;
+    font-family: system-ui, sans-serif;
+}
+.page-wrapper {
+    max-width: 1320px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 1.5rem;
+    padding: 3rem 4rem;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+}
+@media (max-width: 768px) {
+    .page-wrapper { padding: 1.5rem 1rem; }
+    body { padding: 1rem 0.5rem; }
+}
+</style>
+</head>
+<body>
+<div class="page-wrapper">
+<!--
+WORDPRESS SETUP:
+- Slug: part-time-cfo
+- Meta Title: Part-Time CFO for SMEs | How the Engagement Model Works (2026)
+- Meta Description: How a part-time CFO engagement works: hours, cost, scaling, and comparison to full-time CFO, consultant, and accountant. By Colin Wright CPA.
+- Category: Industry News
+- Author: Colin Wright
+- Featured Image: A senior finance professional reviewing engagement documents with a business director at a boardroom table — clean, modern Australian office, warm light, strategic planning feel
+-->
+
+<style>
+:root {
+    --brand-900: #1e3a8a;
+    --brand-600: #2563eb;
+    --brand-700: #1d4ed8;
+    --slate-950: #0F172A;
+    --slate-900: #0f172a;
+    --slate-600: #475569;
+    --slate-500: #64748b;
+    --slate-400: #94a3b8;
+    --surface-light: #ffffff;
+    --surface-muted: #f8fafc;
+    --border-light: #e2e8f0;
+    --shadow-sm: 0 2px 6px rgba(15, 23, 42, .06);
+    --shadow-md: 0 10px 26px rgba(15, 23, 42, .12);
+    --radius-md: .75rem;
+    --radius-xl: 1.5rem;
+}
+
+.dlf-content {
+    font-family: "Kumbh Sans", system-ui, sans-serif;
+    line-height: 1.6;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.dlf-content h1,
+.dlf-content h2,
+.dlf-content h3,
+.dlf-content h4,
+.dlf-content h5,
+.dlf-content h6 {
+    color: var(--slate-950);
+}
+
+.dlf-dark h1,
+.dlf-dark h2,
+.dlf-dark h3,
+.dlf-dark h4,
+.dlf-dark h5,
+.dlf-dark h6 {
+    color: white;
+}
+
+.dlf-btn {
+  color: #ffffff !important;
+}
+
+.dlf-section { padding: 2rem 0; }
+.dlf-container { padding: 0 1rem; }
+
+.dlf-heading-xl {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: var(--slate-950);
+}
+
+.dlf-heading-lg {
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+    color: var(--slate-950);
+}
+
+.dlf-heading-md {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--slate-950);
+}
+
+.dlf-dark .dlf-heading-xl,
+.dlf-dark .dlf-heading-lg,
+.dlf-dark .dlf-heading-md,
+.dlf-hero-card .dlf-heading-xl,
+.dlf-hero-card .dlf-heading-lg,
+.dlf-hero-card .dlf-heading-md {
+    color: white;
+}
+
+.dlf-badge {
+    display: inline-block;
+    padding: .4rem 1rem;
+    border-radius: 9999px;
+    font-size: .75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--brand-600);
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.dlf-card {
+    background: var(--surface-light);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+    transition: .3s ease;
+    margin-bottom: 2rem;
+}
+
+.dlf-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.dlf-hero-card {
+    background: #0F172A;
+    backdrop-filter: blur(12px);
+    color: white;
+    padding: 3rem;
+    border-radius: var(--radius-xl);
+    margin: 2rem 0;
+}
+
+.dlf-grid {
+    display: grid;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.dlf-grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.dlf-grid-3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+
+.dlf-comparison {
+    background: var(--surface-light);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    border: 1px solid var(--border-light);
+    margin: 2rem 0;
+}
+
+.dlf-compare-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.dlf-compare-cell {
+    padding: 1.5rem;
+}
+
+.dlf-compare-cell:first-child {
+    background: var(--surface-muted);
+    border-right: 1px solid var(--border-light);
+    color: var(--slate-600);
+}
+
+.dlf-compare-cell:last-child {
+    font-weight: 700;
+    color: var(--brand-700);
+}
+
+.dlf-feature-row {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.dlf-icon {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.dlf-icon-positive { background: #dcfce7; color: #166534; }
+.dlf-icon-negative { background: #fef2f2; color: #dc2626; }
+
+.dlf-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem 2rem;
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    text-decoration: none;
+    background: var(--brand-600);
+    color: white;
+    transition: .3s ease;
+    margin: 1rem 0;
+}
+
+.dlf-btn:hover {
+    background: var(--brand-700);
+    transform: translateY(-2px);
+}
+
+.dlf-quote {
+    background: #eff6ff;
+    border-left: 4px solid var(--brand-600);
+    padding: 1.5rem;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    margin: 2rem 0;
+    font-style: italic;
+    color: var(--brand-900);
+}
+
+.dlf-dark {
+    background: var(--slate-950);
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: var(--radius-xl);
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.dlf-muted { color: var(--slate-600); }
+.dlf-center { text-align: center; }
+
+@media (max-width: 768px) {
+    .dlf-comparison {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .dlf-compare-row {
+        grid-template-columns: 1fr 1fr;
+        min-width: 680px;
+    }
+
+    .dlf-compare-cell:first-child {
+        border-right: 1px solid var(--border-light);
+    }
+
+    .dlf-grid-2, .dlf-grid-3 { grid-template-columns: 1fr; }
+}
+</style>
+
+<div class="dlf-content">
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 1. HERO SECTION                            -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-section dlf-center">
+    <span class="dlf-badge">Part-Time CFO</span>
+    <h2 class="dlf-heading-xl">Part-Time CFO: The Engagement Model That Gives SMEs Enterprise-Level Finance</h2>
+    <p class="dlf-muted" style="max-width: 720px; margin: 0 auto 1rem;">Eighty-four per cent of hiring managers across accounting and finance reported staffing shortages in 2025. For Australian SMEs, the maths is stark: you need CFO-grade thinking to make your next growth decision, but the talent pool for permanent hires is the thinnest it has been in a generation. The answer is not to wait. It is to change the model.</p>
+    <p class="dlf-muted" style="font-size: 0.85rem;">By <strong>Colin Wright CPA</strong> — Operations Director, Virtual CFO Group &nbsp;|&nbsp; March 2026</p>
+
+    <div class="dlf-hero-card" style="text-align: left;">
+        <span class="dlf-badge" style="background: rgba(37, 99, 235, 0.2); color: #93c5fd;">Executive Summary</span>
+        <h3 class="dlf-heading-lg">Enterprise Finance on a Part-Time Schedule</h3>
+        <p>A <strong>part-time CFO</strong> is a senior chief financial officer who works with your business on a structured retainer, typically two to eight days per month, delivering strategic financial leadership without the $280K+ cost of a full-time hire. The engagement scales: lighter months might involve forecast updates and a director meeting, while heavier months cover capital raise preparation, board presentations, or acquisition modelling. This guide explains how the part-time model actually works in practice, what hours and cadence look like at different revenue stages, and how a part-time CFO compares to a full-time hire, a consultant, and your accountant. Whether you are searching for <strong>fractional CFO services</strong> or <strong>virtual CFO services</strong>, the underlying engagement structure is the same: senior finance leadership, scaled to fit.</p>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 2. PROBLEM SECTION                         -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-section">
+    <div class="dlf-grid dlf-grid-2">
+        <div>
+            <span class="dlf-badge">The Problem</span>
+            <h2 class="dlf-heading-lg">The All-or-Nothing Myth in Financial Leadership</h2>
+            <p>Most business directors think about the CFO role in binary terms: either you hire a full-time chief financial officer or you do without one. That framing made sense when finance required a physical presence, paper ledgers, and daily oversight of a large accounting team. It makes no sense in 2026.</p>
+            <p>The reality is that most Australian SMEs between $2M and $20M in revenue need senior financial thinking for 15 to 40 hours a month. Not 160 hours. Not five days a week sitting in a corner office. They need someone who builds the forecast, models the next hire, prepares the board pack, and sits across the table from the bank. The rest of the month, the bookkeeper and finance manager handle operations.</p>
+
+            <div style="margin-top: 1.5rem;">
+                <div class="dlf-feature-row">
+                    <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                    <span><strong>Full-time cost without full-time need:</strong> a $250K+ salary for someone who spends three days a week on work your bookkeeper could handle</span>
+                </div>
+                <div class="dlf-feature-row">
+                    <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                    <span><strong>Talent drought:</strong> <a href="https://www.roberthalf.com/au/en/insights/salary-guide/finance-and-accounting" target="_blank" rel="noopener">Robert Half's 2026 Salary Guide</a> reports 94% of finance leaders experienced difficulty attracting and retaining staff to meet strategic goals</span>
+                </div>
+                <div class="dlf-feature-row">
+                    <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                    <span><strong>Recruitment limbo:</strong> even if you budget for a permanent CFO, finding one willing to join a $5M-$15M SME takes three to six months and costs $30K-$60K in agency fees</span>
+                </div>
+                <div class="dlf-feature-row">
+                    <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                    <span><strong>Doing without:</strong> the director fills the gap with gut instinct, spending hours each week on finance instead of customers and growth</span>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="dlf-card" style="background: var(--slate-950); color: white; border: none;">
+                <h3 class="dlf-heading-md" style="color: white;">The Engagement Model Shift</h3>
+                <p style="font-size: 1.1rem; line-height: 1.7;">Global demand for <strong>fractional CFO services</strong> has doubled year-over-year, according to industry data. In Australia, the shift is accelerating for a specific reason: enrolments in the Accounting Professional Year programme collapsed from 7,122 in 2018 to just 340 in 2024. The pipeline of qualified finance professionals is contracting while the demand for strategic finance is growing. A part-time CFO sidesteps this structural problem entirely.</p>
+                <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--slate-400);">The question is not whether you need a CFO. It is whether you need one five days a week.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 3. FRAMEWORK SECTION — The Engagement Ladder -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-section dlf-center">
+    <span class="dlf-badge">The Framework</span>
+    <h2 class="dlf-heading-lg">The Engagement Ladder: How a Part-Time CFO Scales with Your Business</h2>
+    <p class="dlf-muted" style="max-width: 700px; margin: 0 auto;">This is <strong>The Engagement Ladder</strong>. A part-time CFO engagement is not a fixed number of hours bolted onto your business. It is a structured model that scales across three stages, matching the intensity of financial leadership to where your business actually sits. Each rung delivers specific outcomes. You climb when the business demands it, not before.</p>
+
+    <div class="dlf-grid dlf-grid-3">
+        <div class="dlf-card" style="text-align: left;">
+            <span class="dlf-icon dlf-icon-positive" style="font-size: 1rem; width: 2rem; height: 2rem; margin-bottom: 1rem;">1</span>
+            <h3 class="dlf-heading-md">Rung 1: Foundation (2-3 days/month)</h3>
+            <p style="font-size: 0.85rem; color: var(--brand-600); font-weight: 700; margin-bottom: 0.75rem;">Best for: $2M-$5M revenue</p>
+            <p>The CFO audits your chart of accounts, builds a management reporting pack, and creates a rolling 13-week cash flow forecast. Each month includes a close review, forecast update, and one 90-minute director strategy session.</p>
+            <p><strong>Outcome:</strong> Clean data, reliable reporting within five business days of month-end.</p>
+        </div>
+
+        <div class="dlf-card" style="text-align: left;">
+            <span class="dlf-icon dlf-icon-positive" style="font-size: 1rem; width: 2rem; height: 2rem; margin-bottom: 1rem;">2</span>
+            <h3 class="dlf-heading-md">Rung 2: Modelling (4-6 days/month)</h3>
+            <p style="font-size: 0.85rem; color: var(--brand-600); font-weight: 700; margin-bottom: 0.75rem;">Best for: $5M-$15M revenue</p>
+            <p>Everything from Rung 1, plus three-scenario budgets, profitability analysis, and regulatory impact models. The CFO begins attending board meetings and presenting to the bank alongside the director.</p>
+            <p><strong>Outcome:</strong> Growth decisions backed by modelled data. The director presents scenarios, not guesses.</p>
+        </div>
+
+        <div class="dlf-card" style="text-align: left;">
+            <span class="dlf-icon dlf-icon-positive" style="font-size: 1rem; width: 2rem; height: 2rem; margin-bottom: 1rem;">3</span>
+            <h3 class="dlf-heading-md">Rung 3: Commercial Partner (6-8 days/month)</h3>
+            <p style="font-size: 0.85rem; color: var(--brand-600); font-weight: 700; margin-bottom: 0.75rem;">Best for: $10M-$25M+ revenue or transaction-ready</p>
+            <p>The CFO leads board meetings, manages investor and bank relationships, and prepares the financial narrative for a capital raise or exit. This is the ceiling of the part-time model: beyond this, the business typically transitions to a full-time hire.</p>
+            <p><strong>Outcome:</strong> Investor-grade financials. A CFO who sits across from acquirers, banks, or PE firms with a credible narrative.</p>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 4. EVIDENCE — Comparison Table + Worked Example -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-section">
+    <span class="dlf-badge">The Comparison</span>
+    <h2 class="dlf-heading-lg">Part-Time CFO vs Full-Time CFO vs Consultant vs Accountant</h2>
+    <p>Directors frequently ask: "How is a part-time CFO different from the other options?" The confusion is understandable. Four different roles occupy adjacent territory. The distinction is in function, commitment, and what each role is actually hired to do.</p>
+
+    <div class="dlf-comparison">
+        <div class="dlf-compare-row" style="background: var(--slate-950); color: white;">
+            <div class="dlf-compare-cell" style="background: var(--slate-950); color: white; font-weight: 700; border-right: 1px solid var(--slate-600);">Dimension</div>
+            <div class="dlf-compare-cell" style="color: white; font-weight: 700;">Part-Time CFO vs Alternatives</div>
+        </div>
+        <div class="dlf-compare-row">
+            <div class="dlf-compare-cell"><strong>Full-Time CFO</strong><br>Focus: all finance functions. Cost: $220K-$350K+ salary plus super, leave, payroll tax ($280K-$430K total). Commitment: permanent, 5 days/week. Best when: revenue exceeds $20M with daily finance complexity</div>
+            <div class="dlf-compare-cell"><strong>Part-Time CFO</strong><br>Focus: strategic finance only. Cost: $3,500-$12,000/month ($42K-$144K/year). Commitment: retainer, 2-8 days/month. Best when: $2M-$20M revenue, need strategy without full-time overhead</div>
+        </div>
+        <div class="dlf-compare-row">
+            <div class="dlf-compare-cell"><strong>Finance Consultant</strong><br>Focus: project-specific deliverables. Cost: $200-$400/hour (uncapped). Commitment: project-based, no ongoing relationship. Best when: one-off projects like system migration or due diligence</div>
+            <div class="dlf-compare-cell"><strong>Part-Time CFO</strong><br>Focus: ongoing strategic partnership. Cost: fixed monthly retainer (predictable). Commitment: continuous, embedded in your decision cycle. Best when: you need a finance partner, not a contractor</div>
+        </div>
+        <div class="dlf-compare-row">
+            <div class="dlf-compare-cell"><strong>External Accountant</strong><br>Focus: compliance and tax. Cost: $5K-$30K/year. Commitment: annual or quarterly, driven by lodgement deadlines. Best when: finances are straightforward and compliance is the primary need</div>
+            <div class="dlf-compare-cell"><strong>Part-Time CFO</strong><br>Focus: forward-looking strategy. Cost: $42K-$144K/year. Commitment: weekly or fortnightly, driven by business decisions. Best when: you need someone modelling the future, not reporting the past</div>
+        </div>
+    </div>
+
+    <h3 class="dlf-heading-md" style="margin-top: 2rem;">What a Typical Month Looks Like: A $9M Services Business</h3>
+    <p>Consider an engineering consultancy in Brisbane. Revenue: $9M. Staff: 28. The director has a bookkeeper in <a href="https://www.xero.com/au/" target="_blank" rel="noopener">Xero</a>, an external accountant for year-end compliance, and a finance coordinator handling invoicing and payroll. The business is growing at 18% annually and the director is evaluating a potential acquisition.</p>
+
+    <div class="dlf-grid dlf-grid-2" style="margin-top: 1.5rem;">
+        <div class="dlf-card">
+            <h3 class="dlf-heading-md">Weeks 1-2: Operational Rhythm</h3>
+            <p>The part-time CFO reviews the month-end management accounts with the finance coordinator (2 hours). Produces a one-page commercial commentary highlighting margin trends across three service divisions. Updates the rolling 13-week cash flow forecast, flagging a tight week in six weeks when two large subcontractor payments coincide with a quarterly <a href="https://www.ato.gov.au/" target="_blank" rel="noopener">ATO</a> obligation (3 hours). Records a 10-minute Loom video walking the director through the headline numbers.</p>
+        </div>
+
+        <div class="dlf-card">
+            <h3 class="dlf-heading-md">Weeks 3-4: Strategic Work</h3>
+            <p>The CFO builds a financial model for the acquisition target: a $3.2M environmental consultancy with 12 staff. Three scenarios modelled (base, synergy-realised, downside). Normalised EBITDA calculated. Working capital requirements mapped for the first 90 days post-acquisition. The CFO presents the model in a 90-minute director strategy session and prepares a preliminary bank presentation for a potential facility (8 hours across the fortnight).</p>
+        </div>
+    </div>
+
+    <p>Total CFO time that month: approximately 35 hours across five concentrated working days. The engagement fee: $7,500. A full-time CFO at <a href="https://www.seek.com.au/career-advice/role/chief-financial-officer/salary" target="_blank" rel="noopener">SEEK's reported median</a> of $225,000 base salary costs approximately $290,000 fully loaded (including the 12% superannuation guarantee, leave provisions, and payroll tax). That is $24,200 per month for a role that, in this business, requires strategic-level thinking for roughly one week out of four.</p>
+
+    <div class="dlf-quote">
+        <strong>A part-time CFO is not a lesser version of a full-time CFO.</strong> It is the same seniority, the same capability, and the same strategic output, structured around the reality that most $2M-$20M businesses need CFO thinking for days per month, not days per week. The model matches the work to the need.
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 5. MID-ARTICLE CTA                         -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-section">
+    <p>If you have been reading this and mentally mapping where your business sits on The Engagement Ladder, that is exactly the exercise worth completing. The next step is confirming which rung fits. <a href="https://www.virtualcfogroup.com.au/schedule-assessment/">A free 30-minute assessment</a> is where we map your current finance function against the level of strategic support your business actually needs right now.</p>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 6. QUALIFIER / REFLECTION SECTION          -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-section">
+    <h2 class="dlf-heading-lg">Is the Part-Time Model Right for Your Business?</h2>
+
+    <div class="dlf-grid dlf-grid-2">
+        <div class="dlf-card">
+            <h3 class="dlf-heading-md">Strong Fit for Part-Time</h3>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-positive">&#10003;</span>
+                <span>Revenue between $2M and $20M with financial decisions growing in size and frequency</span>
+            </div>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-positive">&#10003;</span>
+                <span>You have operational finance covered (bookkeeper, BAS agent, external accountant) but nobody providing strategic oversight</span>
+            </div>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-positive">&#10003;</span>
+                <span>A capital raise, acquisition, or exit is within the next 24 months and you need the financial infrastructure to support it</span>
+            </div>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-positive">&#10003;</span>
+                <span>You want a CFO embedded in your decision cycle, not a consultant who delivers a report and disappears</span>
+            </div>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-positive">&#10003;</span>
+                <span>You already use cloud accounting (<a href="https://www.xero.com/au/" target="_blank" rel="noopener">Xero</a>, MYOB, or QuickBooks) and your team communicates via video and messaging platforms</span>
+            </div>
+        </div>
+
+        <div class="dlf-card">
+            <h3 class="dlf-heading-md">Consider Full-Time Instead If:</h3>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                <span>Revenue exceeds $20M with daily finance complexity requiring a CFO on-site five days per week</span>
+            </div>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                <span>You need someone to manage a large finance team (five or more staff) with hands-on daily supervision</span>
+            </div>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                <span>Your business is listed or preparing for IPO, where continuous disclosure obligations require a permanent C-suite appointment</span>
+            </div>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                <span>Revenue is under $1M with simple finances. A good bookkeeper and external accountant will serve you well at this stage</span>
+            </div>
+        </div>
+    </div>
+
+    <p>The part-time model works because it matches how CFO-level work actually occurs in a business between $2M and $20M. Strategic finance is not a steady daily activity. It clusters around monthly closes, quarterly forecasts, annual budgets, and event-driven projects. Fractional CFO services are structured around those natural rhythms. A <a href="https://www.virtualcfogroup.com.au/what-is-a-fractional-cfo/">fractional CFO</a> delivers the same output as a permanent hire, just without the permanent cost.</p>
+
+    <p>One question worth sitting with: over the past twelve months, how many decisions worth more than $100K did your business make without a financial model to test the assumptions? If the answer is more than two, your business has been operating above its financial infrastructure. Virtual CFO services exist to close that gap without the cost, recruitment risk, and time lag of a permanent hire. To understand how Virtual CFO Group structures these engagements, our <a href="https://www.virtualcfogroup.com.au/fractional-cfo/">fractional CFO service page</a> maps the full model, and our <a href="https://www.virtualcfogroup.com.au/fractional-cfo-australia/">guide to fractional CFOs in Australia</a> covers the broader context.</p>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 7. END CTA                                 -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-dark">
+    <span class="dlf-badge" style="background: rgba(37, 99, 235, 0.2); color: #93c5fd;">Take the Next Step</span>
+    <h2 class="dlf-heading-xl" style="color: white;">Get the CFO. Skip the Full-Time Salary.</h2>
+    <p style="max-width: 600px; margin: 0 auto 1.5rem; color: var(--slate-400);">A 30-minute conversation will map which rung of The Engagement Ladder fits your business, what the cadence looks like, and whether the part-time model is the right structure for where you are heading.</p>
+    <a href="https://www.virtualcfogroup.com.au/contact-us/" class="dlf-btn">Book a Strategic Briefing &rarr;</a>
+    <p style="margin-top: 1.5rem; color: var(--slate-400);">
+        Or call directly: <a href="tel:0416504475" style="color: #93c5fd; text-decoration: none; font-weight: 700;">0416 504 475</a>
+    </p>
+    <p style="font-size: 0.85rem; color: var(--slate-500);">Mon – Fri, 9am – 5pm AEST</p>
+</div>
+
+</div>
+</div>
+</body>
+</html>

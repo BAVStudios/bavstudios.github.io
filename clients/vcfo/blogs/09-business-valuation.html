@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Business Valuation Australia</title>
+<style>
+body {
+    margin: 0;
+    padding: 2rem 1rem;
+    background: #f1f5f9;
+    font-family: system-ui, sans-serif;
+}
+.page-wrapper {
+    max-width: 1320px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 1.5rem;
+    padding: 3rem 4rem;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+}
+@media (max-width: 768px) {
+    .page-wrapper { padding: 1.5rem 1rem; }
+    body { padding: 1rem 0.5rem; }
+}
+</style>
+</head>
+<body>
+<div class="page-wrapper">
+<!--
+WORDPRESS SETUP:
+- Slug: business-valuation-australia
+- Meta Title: Business Valuation in Australia | What a CFO Actually Prepares
+- Meta Description: EBITDA multiples by industry, data room essentials, and what drives valuation up for Australian SMEs. By Colin Wright CPA.
+- Category: Industry News
+- Author: Colin Wright
+- Featured Image: A CFO and business director reviewing valuation documents and financial models at a boardroom table — clean, modern Australian office, professional setting with charts and data visible
+-->
+
+<style>
+:root {
+    --brand-900: #1e3a8a;
+    --brand-600: #2563eb;
+    --brand-700: #1d4ed8;
+    --slate-950: #0F172A;
+    --slate-900: #0f172a;
+    --slate-600: #475569;
+    --slate-500: #64748b;
+    --slate-400: #94a3b8;
+    --surface-light: #ffffff;
+    --surface-muted: #f8fafc;
+    --border-light: #e2e8f0;
+    --shadow-sm: 0 2px 6px rgba(15, 23, 42, .06);
+    --shadow-md: 0 10px 26px rgba(15, 23, 42, .12);
+    --radius-md: .75rem;
+    --radius-xl: 1.5rem;
+}
+
+.dlf-content {
+    font-family: "Kumbh Sans", system-ui, sans-serif;
+    line-height: 1.6;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.dlf-content h1,
+.dlf-content h2,
+.dlf-content h3,
+.dlf-content h4,
+.dlf-content h5,
+.dlf-content h6 {
+    color: var(--slate-950);
+}
+
+.dlf-dark h1,
+.dlf-dark h2,
+.dlf-dark h3,
+.dlf-dark h4,
+.dlf-dark h5,
+.dlf-dark h6 {
+    color: white;
+}
+
+.dlf-btn {
+  color: #ffffff !important;
+}
+
+.dlf-section { padding: 2rem 0; }
+.dlf-container { padding: 0 1rem; }
+
+.dlf-heading-xl {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: var(--slate-950);
+}
+
+.dlf-heading-lg {
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+    color: var(--slate-950);
+}
+
+.dlf-heading-md {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--slate-950);
+}
+
+.dlf-dark .dlf-heading-xl,
+.dlf-dark .dlf-heading-lg,
+.dlf-dark .dlf-heading-md,
+.dlf-hero-card .dlf-heading-xl,
+.dlf-hero-card .dlf-heading-lg,
+.dlf-hero-card .dlf-heading-md {
+    color: white;
+}
+
+.dlf-badge {
+    display: inline-block;
+    padding: .4rem 1rem;
+    border-radius: 9999px;
+    font-size: .75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--brand-600);
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.dlf-card {
+    background: var(--surface-light);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+    transition: .3s ease;
+    margin-bottom: 2rem;
+}
+
+.dlf-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.dlf-hero-card {
+    background: #0F172A;
+    backdrop-filter: blur(12px);
+    color: white;
+    padding: 3rem;
+    border-radius: var(--radius-xl);
+    margin: 2rem 0;
+}
+
+.dlf-grid {
+    display: grid;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.dlf-grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.dlf-grid-3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+
+.dlf-comparison {
+    background: var(--surface-light);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    border: 1px solid var(--border-light);
+    margin: 2rem 0;
+}
+
+.dlf-compare-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.dlf-compare-cell {
+    padding: 1.5rem;
+}
+
+.dlf-compare-cell:first-child {
+    background: var(--surface-muted);
+    border-right: 1px solid var(--border-light);
+    color: var(--slate-600);
+}
+
+.dlf-compare-cell:last-child {
+    font-weight: 700;
+    color: var(--brand-700);
+}
+
+.dlf-feature-row {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.dlf-icon {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.dlf-icon-positive { background: #dcfce7; color: #166534; }
+.dlf-icon-negative { background: #fef2f2; color: #dc2626; }
+
+.dlf-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem 2rem;
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    text-decoration: none;
+    background: var(--brand-600);
+    color: white;
+    transition: .3s ease;
+    margin: 1rem 0;
+}
+
+.dlf-btn:hover {
+    background: var(--brand-700);
+    transform: translateY(-2px);
+}
+
+.dlf-quote {
+    background: #eff6ff;
+    border-left: 4px solid var(--brand-600);
+    padding: 1.5rem;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    margin: 2rem 0;
+    font-style: italic;
+    color: var(--brand-900);
+}
+
+.dlf-dark {
+    background: var(--slate-950);
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: var(--radius-xl);
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.dlf-muted { color: var(--slate-600); }
+.dlf-center { text-align: center; }
+
+@media (max-width: 768px) {
+    .dlf-comparison {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .dlf-compare-row {
+        grid-template-columns: 1fr 1fr;
+        min-width: 680px;
+    }
+
+    .dlf-compare-cell:first-child {
+        border-right: 1px solid var(--border-light);
+    }
+
+    .dlf-grid-2, .dlf-grid-3 { grid-template-columns: 1fr; }
+}
+</style>
+
+<div class="dlf-content">
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 1. HERO SECTION                            -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-section dlf-center">
+    <span class="dlf-badge">Business Valuation</span>
+    <h2 class="dlf-heading-xl">Business Valuation in Australia: What a CFO Actually Prepares</h2>
+    <p class="dlf-muted" style="max-width: 720px; margin: 0 auto 1rem;">Most business owners discover their company's value at the worst possible moment: when a buyer is already at the table and the numbers are not ready. Business valuation in Australia is not an accounting exercise. It is a strategic project that starts 12 to 24 months before anyone signs anything.</p>
+    <p class="dlf-muted" style="font-size: 0.85rem;">By <strong>Colin Wright CPA</strong> — Operations Director, Virtual CFO Group &nbsp;|&nbsp; March 2026</p>
+
+    <div class="dlf-hero-card" style="text-align: left;">
+        <span class="dlf-badge" style="background: rgba(37, 99, 235, 0.2); color: #93c5fd;">Executive Summary</span>
+        <h3 class="dlf-heading-lg">The CFO's Role in Getting Your Business Sale-Ready</h3>
+        <p>A <strong>business valuation in Australia</strong> hinges on one number: normalised EBITDA, multiplied by an industry-specific multiple. For Australian SMEs, those multiples typically range from 2.5x to 8x depending on sector, size, and risk profile. But the number on the page is only half the story. A CFO's job is to build the financial narrative, data room, and structural improvements that push the multiple higher and give buyers confidence to pay it. This guide covers EBITDA multiples by Australian industry, the five factors that drive valuation up (or down), what belongs in a data room, and how business exit planning actually works from a CFO's desk.</p>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 2. PROBLEM SECTION                         -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-section">
+    <div class="dlf-grid dlf-grid-2">
+        <div>
+            <span class="dlf-badge">The Problem</span>
+            <h2 class="dlf-heading-lg">Why Most Australian Businesses Are Undervalued at Sale</h2>
+            <p>Australian M&A activity hit a ten-year low in 2025, with just 720 completed deals nationally according to <a href="https://williambuck.com/tools/dealmaking-insights-report-2026/" target="_blank" rel="noopener">William Buck's 2026 Dealmaking Insights Report</a>. Yet 74% of all Australian transactions over the past decade have been valued below $50 million. Dealmaking in this country is fundamentally a mid-market story, and most mid-market sellers walk into the process underprepared.</p>
+            <p>The pattern is predictable. A founder decides to sell. An accountant produces the tax returns and financial statements. A broker runs a comparable-transactions analysis. And the business sells for a multiple that reflects the state of its records, not the strength of its operations. Business sale readiness is not a document your accountant produces at year-end. It is a 12-month project, and the gap between what the business is worth and what the financials can prove is where value disappears.</p>
+
+            <div style="margin-top: 1.5rem;">
+                <div class="dlf-feature-row">
+                    <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                    <span><strong>EBITDA is not normalised:</strong> owner salaries, personal expenses, and one-off costs still sitting in the P&L, suppressing the earnings a buyer actually cares about</span>
+                </div>
+                <div class="dlf-feature-row">
+                    <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                    <span><strong>No data room exists:</strong> contracts, lease agreements, customer records, and financial models are scattered across email, Dropbox, and the founder's laptop</span>
+                </div>
+                <div class="dlf-feature-row">
+                    <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                    <span><strong>Revenue concentration kills the multiple:</strong> more than 15% of revenue from a single customer is a buyer risk flag that compresses multiples by 0.5x to 1.5x</span>
+                </div>
+                <div class="dlf-feature-row">
+                    <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                    <span><strong>Owner dependency is unaddressed:</strong> if the business cannot operate for 90 days without the founder, buyers either discount the price or walk away</span>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="dlf-card" style="background: var(--slate-950); color: white; border: none;">
+                <h3 class="dlf-heading-md" style="color: white;">The Accountant vs CFO Distinction</h3>
+                <p style="font-size: 1.1rem; line-height: 1.7;">Your accountant prepares historical financial statements. They record what happened. A CFO prepares the financial narrative that tells a buyer what the business is capable of next. Normalised EBITDA, defensible forecasts, a clean data room, and a financial model that survives due diligence scrutiny. These are not accounting outputs. They are valuation tools.</p>
+                <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--slate-400);">Business exit planning is a CFO function. Treating it as a tax function is how businesses leave money on the table.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 3. FRAMEWORK SECTION — The Valuation       -->
+<!--    Readiness Model                         -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-section dlf-center">
+    <span class="dlf-badge">The Framework</span>
+    <h2 class="dlf-heading-lg">The Valuation Readiness Model</h2>
+    <p class="dlf-muted" style="max-width: 700px; margin: 0 auto;">The Valuation Readiness Model is the three-phase process a CFO runs to move a business from "we think it's worth around $X" to a defensible valuation backed by normalised earnings, industry multiples, and a buyer-ready data room. Each phase builds on the one before it. Skipping a phase is how sellers lose 20% to 40% of achievable value.</p>
+
+    <div class="dlf-grid dlf-grid-3">
+        <div class="dlf-card" style="text-align: left;">
+            <span class="dlf-icon dlf-icon-positive" style="font-size: 1rem; width: 2rem; height: 2rem; margin-bottom: 1rem;">1</span>
+            <h3 class="dlf-heading-md">Normalise: Clean the Earnings</h3>
+            <p>Strip out noise that distorts profitability: above-market owner salary, personal expenses, and one-off costs. A CFO reviews three years of statements and builds an EBITDA bridge with line-by-line adjustments.</p>
+            <p><strong>Outcome:</strong> A defensible earnings figure typically 15% to 40% higher than reported profit.</p>
+        </div>
+
+        <div class="dlf-card" style="text-align: left;">
+            <span class="dlf-icon dlf-icon-positive" style="font-size: 1rem; width: 2rem; height: 2rem; margin-bottom: 1rem;">2</span>
+            <h3 class="dlf-heading-md">Strengthen: Fix What Compresses the Multiple</h3>
+            <p>The EBITDA multiple is a risk assessment. Five factors dominate: owner dependency, revenue concentration, recurring revenue, management depth, and financial infrastructure. A CFO addresses each before a buyer sees the business.</p>
+            <p><strong>Outcome:</strong> Reducing owner dependency alone can add 0.5x to 1.0x to the multiple.</p>
+        </div>
+
+        <div class="dlf-card" style="text-align: left;">
+            <span class="dlf-icon dlf-icon-positive" style="font-size: 1rem; width: 2rem; height: 2rem; margin-bottom: 1rem;">3</span>
+            <h3 class="dlf-heading-md">Package: Build the Data Room</h3>
+            <p>The organised collection of every document a buyer needs for due diligence, built 12 to 24 months before sale. Financial statements, EBITDA schedule, forecast model, contracts, employee agreements, and IP documentation.</p>
+            <p><strong>Outcome:</strong> Due diligence moves faster, buyer confidence increases, and the deal is less likely to retrade at a lower price.</p>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 4. EVIDENCE — EBITDA Multiples Table +      -->
+<!--    Worked Example                           -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-section">
+    <span class="dlf-badge">The Numbers</span>
+    <h2 class="dlf-heading-lg">EBITDA Multiples by Industry in Australia</h2>
+    <p>The multiple applied to normalised EBITDA varies by industry, business size, and risk profile. These ranges reflect current Australian mid-market transaction data from advisory firms including <a href="https://www.nashadvisory.com.au/resource-centre/valuing-business-using-the-multiples-approach" target="_blank" rel="noopener">Nash Advisory</a> and <a href="https://williambuck.com/tools/dealmaking-insights-report-2026/" target="_blank" rel="noopener">William Buck</a>. For SMEs with EBITDA between $1M and $5M, expect the lower end of each range. Larger earnings bases command higher multiples.</p>
+
+    <div class="dlf-comparison">
+        <div class="dlf-compare-row" style="background: var(--slate-950); color: white;">
+            <div class="dlf-compare-cell" style="background: var(--slate-950); color: white; font-weight: 700; border-right: 1px solid var(--slate-600);">Industry Sector</div>
+            <div class="dlf-compare-cell" style="color: white;">Typical EBITDA Multiple (AU Mid-Market)</div>
+        </div>
+        <div class="dlf-compare-row">
+            <div class="dlf-compare-cell">Professional Services / Technology</div>
+            <div class="dlf-compare-cell">4x – 8x</div>
+        </div>
+        <div class="dlf-compare-row">
+            <div class="dlf-compare-cell">Food & Beverage / FMCG</div>
+            <div class="dlf-compare-cell">5x – 10x</div>
+        </div>
+        <div class="dlf-compare-row">
+            <div class="dlf-compare-cell">Financial Services</div>
+            <div class="dlf-compare-cell">4x – 6x</div>
+        </div>
+        <div class="dlf-compare-row">
+            <div class="dlf-compare-cell">Transport & Logistics</div>
+            <div class="dlf-compare-cell">3x – 6x</div>
+        </div>
+        <div class="dlf-compare-row">
+            <div class="dlf-compare-cell">Tourism & Hospitality</div>
+            <div class="dlf-compare-cell">3x – 5x</div>
+        </div>
+        <div class="dlf-compare-row">
+            <div class="dlf-compare-cell">Retail</div>
+            <div class="dlf-compare-cell">2x – 4x</div>
+        </div>
+        <div class="dlf-compare-row">
+            <div class="dlf-compare-cell">Manufacturing</div>
+            <div class="dlf-compare-cell">3x – 6x</div>
+        </div>
+        <div class="dlf-compare-row">
+            <div class="dlf-compare-cell">Construction & Trades</div>
+            <div class="dlf-compare-cell">2x – 4x</div>
+        </div>
+    </div>
+
+    <p>One data point that should shape your business exit planning: <a href="https://williambuck.com/tools/dealmaking-insights-report-2026/ma-activity/" target="_blank" rel="noopener">William Buck reports</a> that foreign buyers accounted for 30% of Australian transactions in 2025, the highest share in a decade. Those foreign acquirers paid a 24% premium over domestic buyers on mid-market deals, with average EV/EBITDA multiples of 13.2x compared to 10.6x for local buyers. If your business sale readiness includes positioning for international buyer interest, the achievable multiple shifts materially.</p>
+
+    <h3 class="dlf-heading-md" style="margin-top: 2rem;">Worked Example: What the Multiple Means in Dollars</h3>
+    <p>Take a professional services business turning over $8M with a reported net profit of $680,000. After normalisation, the EBITDA rises to $1.1M: the owner's salary is adjusted from $350,000 to a market-rate $180,000, a $45,000 one-off fit-out cost is added back, and $25,000 in personal vehicle expenses are removed.</p>
+
+    <div class="dlf-grid dlf-grid-2" style="margin-top: 1.5rem;">
+        <div class="dlf-card">
+            <h3 class="dlf-heading-md">Without CFO Preparation</h3>
+            <p>The owner hands a broker the tax returns. EBITDA is presented as the reported $680,000. The buyer applies a conservative 3.5x multiple (reflecting uncertainty in the numbers, owner dependency, and no data room). Enterprise value: <strong>$2.38M</strong>.</p>
+            <p>After deducting $200K in net debt, equity value to the seller: <strong>$2.18M</strong>.</p>
+        </div>
+
+        <div class="dlf-card">
+            <h3 class="dlf-heading-md">With 12 Months of CFO Preparation</h3>
+            <p>Normalised EBITDA of $1.1M is presented with a detailed adjustment schedule. Owner dependency has been reduced (GM hired, systems documented). Revenue concentration addressed (no client above 12% of revenue). Clean data room assembled. Buyer applies 5.0x, reflecting lower risk. Enterprise value: <strong>$5.5M</strong>.</p>
+            <p>After deducting $200K in net debt, equity value to the seller: <strong>$5.3M</strong>.</p>
+        </div>
+    </div>
+
+    <p>The difference: <strong>$3.12M in additional value</strong> to the seller. Not from growing the business. From presenting it properly and addressing the structural risk factors that compress multiples. This is what genuine business sale readiness looks like: not a last-minute scramble, but a deliberate programme of business exit planning led by a CFO who understands what buyers actually scrutinise.</p>
+
+    <div class="dlf-quote">
+        <strong>A buyer does not pay for what your business earned last year.</strong> They pay for what they believe it will earn next year, under their ownership, with the risks they can quantify. A CFO's job is to make those risks smaller and that belief stronger.
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 5. MID-ARTICLE CTA                         -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-section">
+    <p>If you are reading this and thinking about what your business might be worth in two to three years, you are asking the right question at the right time. Business exit planning is a 12 to 24 month project, not a 12-week sprint. <a href="https://www.virtualcfogroup.com.au/schedule-assessment/">A free 30-minute assessment</a> is where we map your current valuation readiness and identify the highest-impact improvements.</p>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 6. QUALIFIER / REFLECTION SECTION          -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-section">
+    <h2 class="dlf-heading-lg">Is Your Business Ready for a Valuation Conversation?</h2>
+
+    <div class="dlf-grid dlf-grid-2">
+        <div class="dlf-card">
+            <h3 class="dlf-heading-md">You Need a CFO on This If:</h3>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-positive">&#10003;</span>
+                <span>You are considering a sale, capital raise, or partnership within the next 24 months</span>
+            </div>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-positive">&#10003;</span>
+                <span>Your EBITDA has never been normalised and you are unsure what adjustments apply</span>
+            </div>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-positive">&#10003;</span>
+                <span>More than 15% of your revenue comes from a single client</span>
+            </div>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-positive">&#10003;</span>
+                <span>The business would struggle to operate for 90 days without your direct involvement</span>
+            </div>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-positive">&#10003;</span>
+                <span>You do not have a data room assembled, or your financial records would not survive professional due diligence</span>
+            </div>
+        </div>
+
+        <div class="dlf-card">
+            <h3 class="dlf-heading-md">You Can Probably Wait If:</h3>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                <span>No exit, sale, or capital raise is on the horizon within three years</span>
+            </div>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                <span>Revenue is under $2M and the business model is still evolving</span>
+            </div>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                <span>You already have a CFO or corporate advisory firm managing valuation preparation</span>
+            </div>
+            <div class="dlf-feature-row">
+                <span class="dlf-icon dlf-icon-negative">&#10007;</span>
+                <span>Your primary need is tax minimisation before sale (that is your accountant's domain, not a CFO's)</span>
+            </div>
+        </div>
+    </div>
+
+    <p>Here is the reflection worth sitting with: if a buyer approached you tomorrow and asked for a normalised EBITDA schedule, a three-year forecast, and a data room login, could your finance function produce those within a fortnight? If the answer is no, your business sale readiness has a gap that no amount of last-minute effort will close. Every month you wait is a month closer to the table without the numbers to back your asking price.</p>
+
+    <p>Virtual CFO Group has guided businesses through this process, including preparing Detector Inspector for VC funding with PieLAB Venture Partners and Mktplace Ventures. The difference between a business that attracts investor confidence and one that does not is rarely the product. It is the financial infrastructure behind it. If you want to understand how a <a href="https://www.virtualcfogroup.com.au/fractional-cfo-australia/">fractional CFO</a> fits into your exit planning timeline, our <a href="https://www.virtualcfogroup.com.au/what-we-do/">sale-readiness and valuation uplift service</a> is the starting point.</p>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 7. END CTA                                 -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="dlf-dark">
+    <span class="dlf-badge" style="background: rgba(37, 99, 235, 0.2); color: #93c5fd;">Take the Next Step</span>
+    <h2 class="dlf-heading-xl" style="color: white;">Know What Your Business Is Worth Before Someone Else Decides</h2>
+    <p style="max-width: 600px; margin: 0 auto 1.5rem; color: var(--slate-400);">A 30-minute conversation will map where your business sits on the valuation readiness spectrum and identify the moves that would have the biggest impact on your achievable multiple.</p>
+    <a href="https://www.virtualcfogroup.com.au/contact-us/" class="dlf-btn">Book a Strategic Briefing &rarr;</a>
+    <p style="margin-top: 1.5rem; color: var(--slate-400);">
+        Or call directly: <a href="tel:0416504475" style="color: #93c5fd; text-decoration: none; font-weight: 700;">0416 504 475</a>
+    </p>
+    <p style="font-size: 0.85rem; color: var(--slate-500);">Mon – Fri, 9am – 5pm AEST</p>
+</div>
+
+</div>
+</div>
+</body>
+</html>
