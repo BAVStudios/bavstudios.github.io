@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+@font-face { font-family: 'FC Minimal'; src: url('file:///Users/juan/Projects/BAVai/brand/fonts/FCMinimal-Light.otf'); font-weight: 300; }
+@font-face { font-family: 'FC Minimal'; src: url('file:///Users/juan/Projects/BAVai/brand/fonts/FCMinimal-Regular.otf'); font-weight: 400; }
+@font-face { font-family: 'FC Minimal'; src: url('file:///Users/juan/Projects/BAVai/brand/fonts/FCMinimal-Medium.otf'); font-weight: 500; }
+@font-face { font-family: 'FC Minimal'; src: url('file:///Users/juan/Projects/BAVai/brand/fonts/FCMinimal-Bold.otf'); font-weight: 700; }
+@font-face { font-family: 'FC Minimal'; src: url('file:///Users/juan/Projects/BAVai/brand/fonts/FCMinimal-Black.otf'); font-weight: 900; }
+@font-face { font-family: 'JetBrains Mono'; src: url('file:///Users/juan/Projects/BAVai/brand/fonts/JetBrainsMono-Regular.ttf'); font-weight: 400; }
+@font-face { font-family: 'JetBrains Mono'; src: url('file:///Users/juan/Projects/BAVai/brand/fonts/JetBrainsMono-Bold.ttf'); font-weight: 700; }
+@font-face { font-family: 'Inter'; src: url('file:///Users/juan/Projects/BAVai/brand/fonts/Inter-Regular.otf'); font-weight: 400; }
+@font-face { font-family: 'Inter'; src: url('file:///Users/juan/Projects/BAVai/brand/fonts/Inter-Medium.otf'); font-weight: 500; }
+@font-face { font-family: 'Inter'; src: url('file:///Users/juan/Projects/BAVai/brand/fonts/Inter-SemiBold.otf'); font-weight: 600; }
+
+:root {
+    --bg: #021540;
+    --oxford: #011640;
+    --folly: #FC0345;
+    --byzantium: #731B65;
+    --indigo: #6C5CE7;
+    --lavender: #A29BFE;
+    --white: #FFFFFF;
+    --text: #D1D5DB;
+    --text-dim: #9CA3AF;
+    --card-bg: #011640;
+    --card-border: rgba(108, 92, 231, 0.25);
+    --accent: #00FDFF;
+    --good: #34D399;
+    --warn: #FBBF24;
+}
+
+@page { size: 254mm 142.9mm; margin: 0; background: var(--bg); }
+
+body {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text);
+    background: var(--bg);
+    font-size: 9.5pt;
+    line-height: 1.55;
+    margin: 0; padding: 0;
+}
+
+section {
+    width: 254mm; height: 142.9mm;
+    padding: 12mm 16mm; box-sizing: border-box;
+    page-break-after: always; position: relative; overflow: hidden;
+}
+section:last-child { page-break-after: auto; }
+section::after {
+    content: counter(page);
+    position: absolute; bottom: 8mm; right: 16mm;
+    font-family: 'FC Minimal', sans-serif; font-size: 7pt;
+    color: var(--text-dim); opacity: 0.5;
+}
+
+/* COVER */
+section.cover {
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: flex-start;
+    text-align: left; padding: 0;
+}
+section.cover::after { content: none; }
+section.cover .logo img { width: 80px; margin-bottom: 30px; opacity: 0.9; }
+section.cover h1 {
+    font-family: 'FC Minimal', sans-serif; font-weight: 900;
+    font-size: 40pt; color: var(--white);
+    margin: 0; border: none; letter-spacing: 3px; line-height: 1.1;
+    text-transform: uppercase;
+}
+section.cover .subtitle {
+    font-family: 'FC Minimal', sans-serif; font-weight: 300;
+    font-size: 13pt; color: var(--folly);
+    margin: 20px 0 28px 0; letter-spacing: 1px;
+}
+section.cover .meta { font-size: 8pt; color: var(--text-dim); letter-spacing: 0.5px; }
+
+/* DIVIDER */
+section.divider {
+    display: flex; flex-direction: column;
+    justify-content: center;
+    padding-left: 32mm; padding-right: 50mm;
+}
+section.divider h1 {
+    font-family: 'FC Minimal', sans-serif; font-weight: 900;
+    font-size: 34pt; color: var(--white);
+    border: none; margin: 0 0 6px 0; line-height: 1.1;
+}
+section.divider .accent { width: 70px; height: 2px; background: var(--indigo); margin: 16px 0; }
+section.divider p { font-size: 10pt; color: var(--text-dim); max-width: 70%; margin: 0; line-height: 1.5; }
+
+/* CONTENT */
+section h1 {
+    font-family: 'FC Minimal', sans-serif; font-weight: 700;
+    font-size: 18pt; color: var(--white);
+    margin: 0 0 16px 0; padding-bottom: 10px;
+    border-bottom: none; line-height: 1.2;
+    text-transform: uppercase;
+}
+section h2 {
+    font-family: 'FC Minimal', sans-serif; font-weight: 500;
+    font-size: 12pt; color: var(--folly); margin: 14px 0 6px 0;
+}
+section h3 {
+    font-family: 'FC Minimal', sans-serif; font-weight: 500;
+    font-size: 10pt; color: var(--lavender); margin: 10px 0 6px 0;
+}
+section p { margin: 5px 0; font-size: 9pt; line-height: 1.5; }
+strong { color: var(--white); font-weight: 700; }
+
+/* LAYOUTS */
+.two-col { display: flex; gap: 20mm; margin-top: 14px; }
+.two-col .col { flex: 1; }
+.three-col { display: flex; gap: 14mm; margin-top: 14px; }
+.three-col .col { flex: 1; }
+
+/* METRICS */
+.metrics-row { display: flex; gap: 14px; margin: 16px 0; }
+.metric-card {
+    flex: 1;
+    background: #091b42;
+    border: 1px solid #1a3a5c;
+    border-top: 1px solid #2a5070;
+    box-shadow: 0 3px 12px -3px rgba(0, 0, 0, 0.45);
+    border-radius: 5px; padding: 14px 16px; text-align: center;
+}
+.metric-card .value {
+    font-family: 'FC Minimal', sans-serif; font-weight: 700;
+    font-size: 22pt; color: var(--white); margin: 0; line-height: 1.15;
+}
+.metric-card .label {
+    font-size: 7pt; color: var(--text-dim);
+    text-transform: uppercase; letter-spacing: 0.5px; margin-top: 6px;
+}
+.metric-hero { text-align: center; margin: 22px 0 20px 0; }
+.metric-hero .value {
+    font-family: 'FC Minimal', sans-serif; font-weight: 900;
+    font-size: 56pt; color: var(--folly); line-height: 1; letter-spacing: -1px;
+}
+.metric-hero .label { font-size: 10pt; color: var(--text-dim); margin-top: 8px; }
+
+/* TABLES */
+.table-wrap { border-radius: 6px; overflow: hidden; margin: 14px 0; border: 0.1px solid #00FDFF; }
+table { width: 100%; border-collapse: collapse; font-family: 'JetBrains Mono', monospace; font-size: 7.5pt; text-align: center; }
+th {
+    background: #00FDFF; color: #021540;
+    padding: 8px 10px; text-align: center;
+    font-family: 'JetBrains Mono', monospace; font-weight: 700;
+    font-size: 7.5pt; text-transform: uppercase; letter-spacing: 0.5px;
+}
+td { padding: 8px 10px; border-bottom: 0.1px solid #00FDFF; color: #E8ECF0; text-align: center; }
+td.num { font-family: 'JetBrains Mono', monospace; font-size: 7.5pt; }
+th.r, td.r { text-align: right; }
+th.l, td.l { text-align: left; }
+tr.highlight-row td { background: rgba(184, 232, 240, 0.06); color: var(--white); font-weight: 600; }
+tr.total td { background: var(--oxford); color: var(--white); font-weight: 700; border-bottom: none; }
+tr:last-child td { border-bottom: none; }
+
+/* TAGS */
+.tag {
+    display: inline-block; font-family: 'FC Minimal', sans-serif; font-weight: 500;
+    font-size: 6.5pt; padding: 2px 10px; border-radius: 3px;
+    text-transform: uppercase; letter-spacing: 0.5px;
+}
+.tag-green { background: rgba(52, 211, 153, 0.15); color: var(--good); }
+.tag-cyan { background: rgba(0, 253, 255, 0.1); color: var(--accent); }
+.tag-blue { background: rgba(108, 92, 231, 0.2); color: var(--lavender); }
+.tag-red { background: rgba(252, 3, 69, 0.12); color: var(--folly); }
+
+/* CARDS */
+.compare-row { display: flex; gap: 12px; margin: 12px 0; }
+.compare-card {
+    flex: 1;
+    background: #091b42;
+    border: 1px solid #1a3a5c;
+    border-top: 1px solid #2a5070;
+    box-shadow: 0 4px 16px -4px rgba(0, 0, 0, 0.5);
+    border-radius: 6px; padding: 14px 16px;
+}
+.compare-card .card-title {
+    font-family: 'FC Minimal', sans-serif; font-weight: 700;
+    font-size: 10pt; color: var(--white); margin: 0 0 8px 0;
+}
+.compare-card p { font-size: 8.5pt; margin: 4px 0; line-height: 1.45; }
+
+/* ALERTS */
+.alert {
+    padding: 12px 16px; border-radius: 6px; margin: 14px 0;
+    font-size: 7.5pt; line-height: 1.5;
+    background: #091b42;
+    border: 1px solid #1a3a5c;
+    border-left: 3px solid var(--indigo);
+    box-shadow: 0 3px 12px -3px rgba(0, 0, 0, 0.45);
+}
+.alert-green {
+    padding: 12px 16px; border-radius: 6px; margin: 14px 0;
+    font-size: 7.5pt; line-height: 1.5;
+    background: #091b42;
+    border: 1px solid #1a3a5c;
+    border-left: 3px solid var(--good);
+    box-shadow: 0 3px 12px -3px rgba(0, 0, 0, 0.45);
+}
+.alert-red {
+    padding: 12px 16px; border-radius: 6px; margin: 14px 0;
+    font-size: 7.5pt; line-height: 1.5;
+    background: #091b42;
+    border: 1px solid #1a3a5c;
+    border-left: 3px solid var(--folly);
+    box-shadow: 0 3px 12px -3px rgba(0, 0, 0, 0.45);
+}
+
+/* LISTS */
+ul { padding-left: 20px; margin: 8px 0; }
+li { margin: 5px 0; font-size: 9pt; line-height: 1.5; }
+li::marker { color: var(--indigo); }
+
+/* END */
+section.end {
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center; text-align: center;
+}
+section.end h1 { font-weight: 900; font-size: 28pt; border: none; margin: 0 0 8px 0; letter-spacing: 1px; }
+section.end p { font-size: 9pt; color: var(--text-dim); }
+section.end a { color: var(--white); text-decoration: underline; text-underline-offset: 3px; }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: COVER -->
+<section style="padding: 0;" class="cover">
+    <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 8mm; background: #091b42;"></div>
+    <div style="position: absolute; top: 26mm; left: 14mm;">
+        <img src="file:///Users/juan/Projects/BAVai/brand/logos/full-stacked.png" style="width: 88px; opacity: 0.7;">
+    </div>
+    <div style="position: absolute; bottom: 30mm; left: 14mm;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 8pt; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px;">SEO Strategy + Progress</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 6pt; color: var(--text-dim); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 14px;">BAVS / MARCH 2026 / V3</div>
+        <div style="font-family: 'FC Minimal', sans-serif; font-weight: 900; font-size: 44pt; color: var(--white); text-transform: uppercase; letter-spacing: 4px; line-height: 0.95;">SEO</div>
+        <div style="font-family: 'FC Minimal', sans-serif; font-weight: 900; font-size: 44pt; color: var(--white); text-transform: uppercase; letter-spacing: 4px; line-height: 0.95;">CONTENT</div>
+        <div style="font-family: 'FC Minimal', sans-serif; font-weight: 900; font-size: 44pt; color: var(--white); text-transform: uppercase; letter-spacing: 4px; line-height: 0.95;">PLAN</div>
+    </div>
+    <div style="position: absolute; bottom: 30mm; right: 16mm; text-align: right;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 9pt; color: var(--text); margin-bottom: 6px;">Virtual CFO Group</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 9pt; color: var(--text);">Australia</div>
+        <div style="width: 30px; height: 1px; background: var(--accent); margin: 12px 0 12px auto; opacity: 0.4;"></div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 6pt; color: var(--text-dim); letter-spacing: 1px;">6 LIVE / 14 QUEUED</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 6pt; color: var(--text-dim); letter-spacing: 1px;">2,630+ SEARCHES/MO</div>
+    </div>
+</section>
+
+<!-- SLIDE 2: TWO WEEKS IN - HERO METRICS (NEW) -->
+<section>
+    <h1>Two Weeks In</h1>
+    <p style="font-size: 8pt; color: var(--text-dim); margin-bottom: 4px;">Google Search Console data - 7 day window ending March 16, 2026</p>
+    <div class="metric-hero">
+        <div class="value">2,101</div>
+        <div class="label">Google impressions in the last 7 days</div>
+    </div>
+    <div class="metrics-row">
+        <div class="metric-card">
+            <div class="value">11</div>
+            <div class="label">Clicks (7d)</div>
+        </div>
+        <div class="metric-card">
+            <div class="value" style="color: var(--accent);">15.2</div>
+            <div class="label">Best Position</div>
+        </div>
+        <div class="metric-card">
+            <div class="value">4<span style="font-size: 12pt; color: var(--text-dim);"> / 6</span></div>
+            <div class="label">Blogs Indexed</div>
+        </div>
+        <div class="metric-card">
+            <div class="value">157</div>
+            <div class="label">Unique Queries</div>
+        </div>
+    </div>
+    <div class="alert-green"><strong>Blog 1</strong> (Fractional CFO Australia) climbed from position 35 to position 20 in one week. Approaching page 1.</div>
+</section>
+
+<!-- SLIDE 3: BLOG SCORECARD (NEW) -->
+<section>
+    <h1>Blog Scorecard</h1>
+    <p style="font-size: 8pt; color: var(--text-dim); margin-bottom: 6px;">All 6 blogs published. 4 indexed by Google. 2 need immediate action.</p>
+    <div class="table-wrap"><table>
+        <tr><th>#</th><th class="l">Blog</th><th>Position</th><th>Impressions</th><th>Clicks</th><th>Status</th><th>Trend</th></tr>
+        <tr class="highlight-row"><td>1</td><td class="l">Fractional CFO Australia</td><td class="num" style="color: var(--accent);">19.8</td><td class="num">308</td><td class="num">2</td><td><span class="tag tag-green">Indexed</span></td><td style="color: var(--good);">35 &rarr; 20</td></tr>
+        <tr class="highlight-row"><td>5</td><td class="l">Virtual CFO Australia</td><td class="num" style="color: var(--accent);">15.2</td><td class="num">301</td><td class="num">2</td><td><span class="tag tag-green">Indexed</span></td><td style="color: var(--accent);">Strongest</td></tr>
+        <tr><td>4</td><td class="l">Cash Flow Management</td><td class="num">59.9</td><td class="num">247</td><td class="num">1</td><td><span class="tag tag-green">Indexed</span></td><td style="color: var(--text-dim);">Early</td></tr>
+        <tr><td>6</td><td class="l">How to Improve Cash Flow</td><td class="num">24.9</td><td class="num">116</td><td class="num">0</td><td><span class="tag tag-green">Indexed</span></td><td style="color: var(--text-dim);">Early</td></tr>
+        <tr><td>2</td><td class="l">Outsourced CFO Services</td><td class="num" style="color: var(--folly);">-</td><td class="num">0</td><td class="num">0</td><td><span class="tag tag-red">Not Indexed</span></td><td style="color: var(--folly);">Invisible</td></tr>
+        <tr><td>3</td><td class="l">CFO Services for Small Business</td><td class="num" style="color: var(--folly);">-</td><td class="num">0</td><td class="num">0</td><td><span class="tag tag-red">Not Indexed</span></td><td style="color: var(--folly);">Invisible</td></tr>
+    </table></div>
+    <p style="font-size: 7pt; color: var(--text-dim);">Position = target keyword rank in Google. Under 10 = page 1. Under 20 = page 2.</p>
+</section>
+
+<!-- SLIDE 4: FLAGS + TRAJECTORY (NEW) -->
+<section>
+    <h1>Flags & Next Moves</h1>
+    <div class="two-col" style="gap: 16mm;">
+        <div class="col">
+            <h3 style="color: var(--folly);">Fix Now</h3>
+            <div class="alert-red">
+                <strong>2 blogs are live but not indexed.</strong> Google hasn't found them yet. Submit these URLs in Search Console:<br><br>
+                <span style="font-size: 6.5pt; color: var(--accent); word-break: break-all;">virtualcfogroup.com.au/outsourced-cfo-services-growing-businesses/</span><br>
+                <span style="font-size: 6.5pt; color: var(--accent); word-break: break-all;">virtualcfogroup.com.au/cfo-services-small-business/</span><br><br>
+                URL Inspection &rarr; Request Indexing. Takes 3-7 days.
+            </div>
+        </div>
+        <div class="col">
+            <h3 style="color: var(--good);">Trajectory (30d &rarr; 7d)</h3>
+            <div class="table-wrap"><table>
+                <tr><th class="l">Keyword</th><th>30d</th><th>7d</th><th>Direction</th></tr>
+                <tr><td class="l" style="font-size: 6.5pt;">fractional cfo australia</td><td class="num">35.5</td><td class="num" style="color: var(--good);">19.8</td><td style="color: var(--good);">Climbing</td></tr>
+                <tr><td class="l" style="font-size: 6.5pt;">virtual cfo australia</td><td class="num">11.1</td><td class="num">15.2</td><td style="color: var(--text-dim);">Fluctuating</td></tr>
+                <tr><td class="l" style="font-size: 6.5pt;">virtual cfo</td><td class="num">24.7</td><td class="num">25.9</td><td style="color: var(--text-dim);">Stable</td></tr>
+                <tr><td class="l" style="font-size: 6.5pt;">cash flow management</td><td class="num">68.4</td><td class="num">59.9</td><td style="color: var(--good);">Improving</td></tr>
+            </table></div>
+            <div class="alert" style="margin-top: 10px;">
+                <strong>7 cities</strong> appearing in search queries (Melbourne, Brisbane, Canberra, Newcastle, Sunshine Coast) without any geo-targeted pages.
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SLIDE 5: WHAT WE'VE BUILT (existing, updated) -->
+<section>
+    <h1>What We've Built</h1>
+    <div class="metric-hero">
+        <div class="value">20</div>
+        <div class="label">SEO-optimised blog posts ready to publish</div>
+    </div>
+    <div class="metrics-row">
+        <div class="metric-card">
+            <div class="value">2,630+</div>
+            <div class="label">Monthly AU Searches</div>
+        </div>
+        <div class="metric-card">
+            <div class="value">20+</div>
+            <div class="label">Primary Keywords</div>
+        </div>
+        <div class="metric-card">
+            <div class="value">3</div>
+            <div class="label">Topic Clusters</div>
+        </div>
+    </div>
+    <div class="alert-green"><strong>6 live now.</strong> 14 ready to publish in three chunks over March-April.</div>
+</section>
+
+<!-- SLIDE 6: CHUNK 1 -->
+<section>
+    <h1>Chunk 1: Pillar Posts</h1>
+    <p><span class="tag tag-green">Week of 17 March</span> &nbsp; <strong style="color: var(--accent);">1,570 monthly searches</strong></p>
+    <div class="table-wrap"><table>
+        <tr><th>#</th><th>Title</th><th>Keyword</th><th class="r">Volume</th></tr>
+        <tr class="highlight-row"><td>8</td><td><a href="https://bavstudios.github.io/clients/vcfo/blogs/08-cash-flow-forecasting.html" target="_blank" style="color: #00FDFF; text-decoration: underline; text-underline-offset: 2px;">Cash Flow Forecasting: Complete Guide</a></td><td>cash flow forecasting</td><td class="num" style="color: var(--accent);"><strong>1,000</strong></td></tr>
+        <tr><td>9</td><td><a href="https://bavstudios.github.io/clients/vcfo/blogs/09-business-valuation.html" target="_blank" style="color: #00FDFF; text-decoration: underline; text-underline-offset: 2px;">Business Valuation in Australia</a></td><td>business valuation australia</td><td class="num">210</td></tr>
+        <tr><td>10</td><td><a href="https://bavstudios.github.io/clients/vcfo/blogs/10-what-does-cfo-do.html" target="_blank" style="color: #00FDFF; text-decoration: underline; text-underline-offset: 2px;">What Does a CFO Actually Do?</a></td><td>what does a cfo do</td><td class="num">210</td></tr>
+        <tr><td>11</td><td><a href="https://bavstudios.github.io/clients/vcfo/blogs/11-exit-planning.html" target="_blank" style="color: #00FDFF; text-decoration: underline; text-underline-offset: 2px;">Business Exit Planning Checklist</a></td><td>business exit planning</td><td class="num">140</td></tr>
+        <tr><td>7</td><td><a href="https://bavstudios.github.io/clients/vcfo/blogs/07-when-to-hire-cfo.html" target="_blank" style="color: #00FDFF; text-decoration: underline; text-underline-offset: 2px;">When to Hire a CFO: 7 Signs</a></td><td>when to hire a cfo</td><td class="num">10</td></tr>
+    </table></div>
+</section>
+
+<!-- SLIDE 7: CHUNK 2 -->
+<section>
+    <h1>Chunk 2: Supporting Content</h1>
+    <p><span class="tag tag-cyan">Week of 24 March</span> &nbsp; <strong style="color: var(--accent);">320+ monthly searches</strong></p>
+    <div class="table-wrap"><table>
+        <tr><th>#</th><th>Title</th><th>Keyword</th><th class="r">Volume</th></tr>
+        <tr><td>12</td><td><a href="https://bavstudios.github.io/clients/vcfo/blogs/12-three-way-forecast.html" target="_blank" style="color: #00FDFF; text-decoration: underline; text-underline-offset: 2px;">The Three-Way Forecast</a></td><td>three way forecast</td><td class="num">110</td></tr>
+        <tr><td>14</td><td><a href="https://bavstudios.github.io/clients/vcfo/blogs/14-cash-flow-problems.html" target="_blank" style="color: #00FDFF; text-decoration: underline; text-underline-offset: 2px;">Cash Flow Problems: Patterns a CFO Spots</a></td><td>cash flow problems small business</td><td class="num">110</td></tr>
+        <tr><td>13</td><td><a href="https://bavstudios.github.io/clients/vcfo/blogs/13-fractional-cfo.html" target="_blank" style="color: #00FDFF; text-decoration: underline; text-underline-offset: 2px;">What is a Fractional CFO?</a></td><td>what is a fractional cfo</td><td class="num">90</td></tr>
+        <tr><td>15</td><td><a href="https://bavstudios.github.io/clients/vcfo/blogs/15-virtual-cfo-cost.html" target="_blank" style="color: #00FDFF; text-decoration: underline; text-underline-offset: 2px;">Virtual CFO Cost Australia 2026</a></td><td>how much does a virtual cfo cost</td><td class="num">10</td></tr>
+        <tr><td>16</td><td><a href="https://bavstudios.github.io/clients/vcfo/blogs/16-cfo-vs-accountant.html" target="_blank" style="color: #00FDFF; text-decoration: underline; text-underline-offset: 2px;">Virtual CFO vs Accountant</a></td><td>virtual cfo vs accountant</td><td class="num">*</td></tr>
+    </table></div>
+</section>
+
+<!-- SLIDE 8: CHUNK 3 -->
+<section>
+    <h1>Chunk 3: Conversion Content</h1>
+    <p><span class="tag tag-blue">Scheduled for April</span> &nbsp; Scheduled to auto-publish weekly</p>
+    <div class="table-wrap"><table>
+        <tr><th>#</th><th>Title</th><th>Keyword</th><th class="r">Volume</th></tr>
+        <tr><td>17</td><td><a href="https://bavstudios.github.io/clients/vcfo/blogs/17-virtual-cfo-worth-it.html" target="_blank" style="color: #00FDFF; text-decoration: underline; text-underline-offset: 2px;">Is a Virtual CFO Worth It? ROI Breakdown</a></td><td>is a virtual cfo worth it</td><td class="num">10</td></tr>
+        <tr><td>20</td><td><a href="https://bavstudios.github.io/clients/vcfo/blogs/20-part-time-cfo.html" target="_blank" style="color: #00FDFF; text-decoration: underline; text-underline-offset: 2px;">Part-Time CFO: The Engagement Model</a></td><td>part time cfo</td><td class="num">70</td></tr>
+        <tr><td>19</td><td><a href="https://bavstudios.github.io/clients/vcfo/blogs/19-cfo-for-startups.html" target="_blank" style="color: #00FDFF; text-decoration: underline; text-underline-offset: 2px;">Virtual CFO for Startups</a></td><td>virtual cfo for startups</td><td class="num">10</td></tr>
+        <tr><td>18</td><td><a href="https://bavstudios.github.io/clients/vcfo/blogs/18-choose-virtual-cfo.html" target="_blank" style="color: #00FDFF; text-decoration: underline; text-underline-offset: 2px;">How to Choose a Virtual CFO</a></td><td>how to choose a virtual cfo</td><td class="num">*</td></tr>
+    </table></div>
+    <p style="margin-top: 8px; font-size: 7.5pt; color: var(--text-dim);">* Zero in Ubersuggest AU but confirmed search demand from competitor ranking pages.</p>
+</section>
+
+<!-- SLIDE 9: TOPIC CLUSTERS -->
+<section>
+    <h1>How the Content Connects</h1>
+    <p style="font-size: 8pt; margin-bottom: 16px;">Three topic clusters. Internal links between posts. Google rewards depth.</p>
+    <div class="three-col" style="gap: 10mm;">
+        <div class="col">
+            <div class="compare-card" style="padding: 16px 18px;">
+                <div class="card-title" style="color: var(--accent); font-size: 11pt; margin-bottom: 10px;">Virtual CFO</div>
+                <p style="font-family: 'Inter', sans-serif; font-size: 8pt; color: var(--text); line-height: 1.5; margin: 0;">What it is, costs, how to choose one</p>
+                <p style="font-family: 'Inter', sans-serif; font-size: 6.5pt; color: var(--text-dim); margin-top: 10px; letter-spacing: 0.3px;">10 POSTS</p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="compare-card" style="padding: 16px 18px;">
+                <div class="card-title" style="color: var(--good); font-size: 11pt; margin-bottom: 10px;">Cash Flow</div>
+                <p style="font-family: 'Inter', sans-serif; font-size: 8pt; color: var(--text); line-height: 1.5; margin: 0;">Forecasting, management, common problems</p>
+                <p style="font-family: 'Inter', sans-serif; font-size: 6.5pt; color: var(--text-dim); margin-top: 10px; letter-spacing: 0.3px;">5 POSTS</p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="compare-card" style="padding: 16px 18px;">
+                <div class="card-title" style="color: var(--warn); font-size: 11pt; margin-bottom: 10px;">Growth & Exit</div>
+                <p style="font-family: 'Inter', sans-serif; font-size: 8pt; color: var(--text); line-height: 1.5; margin: 0;">Valuation, exit planning, startup finance</p>
+                <p style="font-family: 'Inter', sans-serif; font-size: 6.5pt; color: var(--text-dim); margin-top: 10px; letter-spacing: 0.3px;">3 POSTS</p>
+            </div>
+        </div>
+    </div>
+    <p style="font-size: 7.5pt; color: var(--text-dim); margin-top: 16px;">Every post links to /schedule-assessment/. Two CTAs per post: mid-article (subtle) and end (direct).</p>
+</section>
+
+<!-- SLIDE 10: OUTLOOK -->
+<section>
+    <h1>Two-Month Outlook</h1>
+    <div class="two-col">
+        <div class="col">
+            <h3>March</h3>
+            <ul>
+                <li>Publish Chunks 1 + 2 (11 posts)</li>
+                <li>Schedule Chunk 3 for April</li>
+                <li>Submit all URLs to Search Console</li>
+            </ul>
+        </div>
+        <div class="col">
+            <h3>April</h3>
+            <ul>
+                <li>Chunk 3 auto-publishes (4 posts)</li>
+                <li>Google indexes new content</li>
+                <li>Chunk 1 starts generating traffic</li>
+            </ul>
+        </div>
+    </div>
+    <h3>May: Next Phase</h3>
+    <div class="compare-row">
+        <div class="compare-card">
+            <div class="card-title">Melbourne Page</div>
+            <p>90 searches/mo, SD 10</p>
+        </div>
+        <div class="compare-card">
+            <div class="card-title">Industry Pages</div>
+            <p>Construction, healthcare, SaaS</p>
+        </div>
+        <div class="compare-card">
+            <div class="card-title">Schema Markup</div>
+            <p>Team credentials in Google</p>
+        </div>
+    </div>
+</section>
+
+<!-- SLIDE 11: END -->
+<section class="end">
+    <h1>Let's Keep Building</h1>
+    <p><a href="mailto:juan@bavstudios.com">juan@bavstudios.com</a></p>
+    <p style="margin-top: 8px;"><a href="https://app.usemotion.com/meet/bavstudios/standard?d=30">Book a call</a></p>
+</section>
+
+</body>
+</html>
